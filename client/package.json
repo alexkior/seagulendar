@@ -1,0 +1,22 @@
+{
+  "name": "seagulendar",
+  "version": "1.0.0",
+  "description": "cool calendar with features",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexkior/seagulendar.git"
+  },
+  "keywords": [
+    "calendar"
+  ],
+  "author": "alexkior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexkior/seagulendar/issues"
+  },
+  "homepage": "https://github.com/alexkior/seagulendar#readme"
+}
