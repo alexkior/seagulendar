@@ -1,22 +1,22 @@
 {
   "name": "seagulendar",
-  "version": "1.0.0",
-  "description": "cool calendar with features",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "test"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexkior/seagulendar.git"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "keywords": [
-    "calendar"
-  ],
-  "author": "alexkior",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alexkior/seagulendar/issues"
-  },
-  "homepage": "https://github.com/alexkior/seagulendar#readme"
+  "devDependencies": {
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "@vitejs/plugin-react": "^2.2.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.0"
+  }
 }
