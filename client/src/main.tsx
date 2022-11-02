@@ -1,12 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-} from "react-router-dom";
+  RouterProvider
+} from "react-router-dom"
 
-import router from './router/router'
+import { router } from './router'
 
 import './index.scss'
 
