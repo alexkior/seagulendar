@@ -1,5 +1,26 @@
 .MainLayout {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 100vh;
+}
+
+.MainLayout__seagull {
+  height: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  40% {
+    transform: scale(1) rotate(5deg);
+  }
+  80% {
+    transform: scale(1) rotate(-5deg);
+  }
+  100% {
+    transform: scale(0.9) rotate(0);
+  }
 }
