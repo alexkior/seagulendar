@@ -3,10 +3,11 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: auto;
-  column-gap: 20px;
+  gap: 24px;
 }
 
 .Calendar__test_element {
   background-color: aqua;
-  min-height: 60px;
+  min-width: 128px;
+  min-height: 128px;
 }
