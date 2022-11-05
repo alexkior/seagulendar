@@ -1,0 +1,12 @@
+.Calendar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto;
+  column-gap: 20px;
+}
+
+.Calendar__test_element {
+  background-color: aqua;
+  min-height: 60px;
+}

@@ -23,13 +23,5 @@
 
 body {
   margin: 0;
-  background-size: 300% 300%;
-  background-image: linear-gradient(
-        -45deg, 
-        rgba(59,173,227,1) 0%, 
-        rgba(87,111,230,1) 25%, 
-        rgb(200, 35, 250) 51%, 
-        rgb(255, 91, 15) 100%
-  );  
-  animation: AnimateBG 20s ease infinite;
+  background-color: #fff;
 }

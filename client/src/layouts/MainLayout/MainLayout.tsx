@@ -3,7 +3,8 @@ import {
   Outlet
 } from "react-router-dom";
 
-import seagul from '../../assets/seagull.svg'
+import { Header } from "../../components/Header";
+import { Calendar } from "../../components/Calendar";
 
 import styles from './MainLayout.module.scss';
 
@@ -11,10 +12,11 @@ import styles from './MainLayout.module.scss';
 const MainLayout: React.FC = function MainLayout(params:any) {
   return (
 
-      <div className={styles.MainLayout}>
-        <img className={styles.MainLayout__seagull} src={seagul} alt="seagull" />
+    <main className={styles.MainLayout}>
+      <Header />
+      <Calendar />
         <Outlet />
-      </div>
+      </main>
 
   );
 }
