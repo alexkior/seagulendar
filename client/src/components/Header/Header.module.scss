@@ -1,4 +1,4 @@
-.Menu {
+.Header {
   padding: 20px 0px 0px 0px;
   min-width: 128px;
   height: 100%;
@@ -8,7 +8,7 @@
   justify-content: space-between;
 }
 
-.Menu__seagull {
+.Header__seagull {
   height: 64px;
   animation: pulse 2s infinite;
 }
