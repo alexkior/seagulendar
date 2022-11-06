@@ -8,7 +8,7 @@ const Header: React.FC = function Header() {
   return (
     <>
       <header className={styles.Header}>
-        <img className={styles.Header__seagull} src={seagul} alt="seagull" />
+        {/* <img className={styles.Header__seagull} src={seagul} alt="seagull" /> */}
 
       </header>
     </>

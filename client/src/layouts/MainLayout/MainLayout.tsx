@@ -3,6 +3,7 @@ import {
   Outlet
 } from "react-router-dom";
 
+import { Sidebar } from '../../components/Sidebar';
 import { Header } from "../../components/Header";
 import { Calendar } from "../../components/Calendar";
 
@@ -13,6 +14,7 @@ const MainLayout: React.FC = function MainLayout(params:any) {
   return (
 
     <main className={styles.MainLayout}>
+      <Sidebar />
       <Header />
       <Calendar />
       </main>
