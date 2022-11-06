@@ -7,6 +7,10 @@ const SliderBlock: React.FC = function SliderBlock() {
       <h3 className={styles.SidebarBlock__title}>
         Plans:
       </h3>
+
+      {/* <div className={styles.SidebarBlock__test_element}>
+        
+      </div> */}
     </div>
   )
 }
