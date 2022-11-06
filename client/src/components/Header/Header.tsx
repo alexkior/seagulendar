@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import seagul from '../../assets/seagull.svg'
+// import seagul from '../../assets/seagull.svg'
 
 import styles from './Header.module.scss'
 
