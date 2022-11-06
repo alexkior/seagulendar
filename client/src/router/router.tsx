@@ -1,15 +1,15 @@
 import * as React from 'react'
 import {
-    createBrowserRouter
+  createBrowserRouter
 } from 'react-router-dom'
 
 import { MainLayout } from '../layouts/MainLayout'
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <MainLayout />,
-    },
+  {
+    path: '/',
+    element: <MainLayout />,
+  },
 
 ])
 

@@ -8,15 +8,15 @@ import styles from './MainLayout.module.scss'
 
 
 const MainLayout: React.FC = function MainLayout() {
-    return (
+  return (
 
-        <main className={styles.MainLayout}>
-            <Sidebar />
-            <Header />
-            <Calendar />
-        </main>
+    <main className={styles.MainLayout}>
+      <Sidebar />
+      <Header />
+      <Calendar />
+    </main>
 
-    )
+  )
 }
 
 export default MainLayout
