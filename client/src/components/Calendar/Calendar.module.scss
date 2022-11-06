@@ -4,16 +4,17 @@
   grid-row-start: 3;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(7, 120px);
+  grid-template-rows: repeat(7, 128px);
   justify-items: stretch;
   align-content: stretch;
   gap: 32px;
 }
 
 .Calendar__test_element {
-  background-color: aqua;
-  min-width: 150px;
-  min-height: 120px;
+  background-color: #FAF3E9;
+  border-radius: 12px;
+  min-width: 156px;
+  min-height: 128px;
   width: 100%;
   height: 100%;
 }
