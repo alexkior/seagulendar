@@ -9,7 +9,7 @@ const Sidebar: React.FC = function Sidebar() {
       </h2>
 
       <h2 className={styles.Sidebar__subtitle}>
-        Year
+        2022
       </h2>
     </section>
   )
