@@ -10,6 +10,8 @@ const Header: React.FC = function Header() {
       <header className={styles.Header}>
         {/* <img className={styles.Header__seagull} src={seagul} alt="seagull" /> */}
 
+        <h2 className={styles.Header__userName}>UserName</h2>
+        <h1 className={styles.Header__projectName}>Seagulendar</h1>
       </header>
     </>
   )
