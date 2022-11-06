@@ -1,0 +1,13 @@
+.SliderBlockList {
+  width: 100%;
+  min-height: 288px;
+  grid-column: 2 / 7;
+  grid-row: auto;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: repeat(auto-fill, minmax(64px, 128px));
+  justify-items: stretch;
+  align-content: stretch;
+  row-gap: 32px;
+}
