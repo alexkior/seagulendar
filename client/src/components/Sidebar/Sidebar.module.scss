@@ -9,9 +9,21 @@
   background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(8, 128px);
+  grid-template-rows: repeat(auto-fill, 128px);
   justify-items: stretch;
   align-content: stretch;
   gap: 32px;
+
+}
+
+.Sidebar__title {
+
+}
+
+.Sidebar__subtitle {
+
+}
+
+.Sidebar__section {
 
 }
