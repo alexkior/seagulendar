@@ -2,11 +2,11 @@ import * as React from 'react'
 import styles from './Sidebar.module.scss'
 
 const Sidebar: React.FC = function Sidebar() {
-  return (
-    <section className={styles.Sidebar}>
+    return (
+        <section className={styles.Sidebar}>
 
-    </section>
-  )
+        </section>
+    )
 }
 
 export default Sidebar
