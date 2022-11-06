@@ -1,9 +1,9 @@
 .Header {
   width: 100%;
-  min-height: 128px;
+  min-height: 64px;
   display: grid;
   grid-template-columns: repeat(7, 154px);
-  grid-template-rows: 128px;
+  grid-template-rows: 64px;
   justify-items: stretch;
   align-content: stretch;
   gap: 32px;
@@ -15,6 +15,7 @@
 .Header__userName {
   grid-column: 0 / 2;
   font-size: 24px;
+  font-weight: 900;
 
 
 }
@@ -22,6 +23,8 @@
 .Header__projectName {
   grid-column: 6 / 8;
   font-size: 24px;
+  font-weight: 900;
+
   justify-self: flex-end;
 }
 

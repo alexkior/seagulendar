@@ -1,6 +1,8 @@
 import * as React from 'react'
 import styles from './Sidebar.module.scss'
 
+import { SliderBlock } from './components/SliderBlock'
+
 const Sidebar: React.FC = function Sidebar() {
   return (
     <section className={styles.Sidebar}>
@@ -11,6 +13,8 @@ const Sidebar: React.FC = function Sidebar() {
       <h2 className={styles.Sidebar__subtitle}>
         2022
       </h2>
+
+      <SliderBlock />
     </section>
   )
 }

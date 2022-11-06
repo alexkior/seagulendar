@@ -1,0 +1,21 @@
+.CalendarList {
+  width: 100%;
+  height: auto;
+  grid-column: 1 / 7;
+  grid-row-start: 3;
+  display: grid;
+  grid-template-columns: repeat(7, 154px);
+  grid-template-rows: repeat(auto-fill, 128px);
+  justify-items: stretch;
+  align-content: stretch;
+  gap: 32px;
+}
+
+.Calendar__test_element {
+  background-color: #FAF3E9;
+  border-radius: 12px;
+  min-width: 156px;
+  min-height: 128px;
+  width: 100%;
+  height: 100%;
+}

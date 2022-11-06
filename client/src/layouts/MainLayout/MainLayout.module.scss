@@ -7,8 +7,9 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(auto-fill, 128px);
-  gap: 32px;
+  grid-template-rows: repeat(auto-fill, 64px);
+  row-gap: 16px;
+  column-gap: 32px;
 
 }
 

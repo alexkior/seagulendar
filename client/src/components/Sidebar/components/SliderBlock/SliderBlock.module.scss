@@ -1,0 +1,23 @@
+.SliderBlock {
+  width: 100%;
+  min-height: 288px;
+  grid-column: 2 / 7;
+  grid-row: auto;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(auto-fill, 64px);
+  justify-items: stretch;
+  align-content: stretch;
+  row-gap: 16px;
+}
+
+.SidebarBlock__title {
+  grid-column: 1 / 7;
+  grid-row: 0 / 2;
+  font-size: 24px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+
+}

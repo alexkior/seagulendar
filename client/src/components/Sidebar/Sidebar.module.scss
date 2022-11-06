@@ -9,10 +9,10 @@
   background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(auto-fill, 128px);
+  grid-template-rows: repeat(auto-fill, 64px);
   justify-items: stretch;
   align-content: stretch;
-  row-gap: 32px;
+  row-gap: 16px;
 
 }
 
@@ -20,13 +20,22 @@
   grid-column: 2 / 5;
   grid-row: 0 / 2;
   font-size: 24px;
+  font-weight: 900;
+
 
 }
 
 .Sidebar__subtitle {
   grid-column: 2 / 5;
-  grid-row: 2 / 3;
+  grid-row: 2 / 4;
   font-size: 48px;
+  font-weight: 900;
+  padding: 0px;
+  margin: 0px;
+
+  display: flex;
+  align-items: center;
+
 }
 
 .Sidebar__section {
