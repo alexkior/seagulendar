@@ -9,7 +9,7 @@
   min-height: 100vh;
   background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: 32px repeat(5, 1fr) 32px;
   grid-template-rows: 64px 128px 1fr;
   justify-items: stretch;
   align-content: stretch;
