@@ -1,11 +1,16 @@
 import * as React from 'react'
+import { motion } from 'framer-motion'
 import styles from './Sidebar.module.scss'
 import { SidebarBlockList } from './components/SidebarBlockList'
 
-
 const Sidebar: React.FC = function Sidebar() {
   return (
-    <section className={styles.Sidebar}>
+    <motion.section
+      initial={{ x: '-500px', opacity: 0 }}
+      animate={{ x: '0px', opacity: 1 }}
+      transition={{ duration: 1 }}
+      className={styles.Sidebar}
+    >
       <h2 className={styles.Sidebar__title}>
         Date Month
       </h2>
@@ -16,7 +21,7 @@ const Sidebar: React.FC = function Sidebar() {
 
       <SidebarBlockList />
 
-    </section>
+    </motion.section>
   )
 }
 
