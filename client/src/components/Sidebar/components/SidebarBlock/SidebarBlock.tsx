@@ -1,9 +1,9 @@
 import * as React from 'react'
-import styles from './SliderBlock.module.scss'
+import styles from './SidebarBlock.module.scss'
 
-const SliderBlock: React.FC = function SliderBlock() {
+const SidebarBlock: React.FC = function SidebarBlock() {
   return (
-    <div className={styles.SliderBlock}>
+    <div className={styles.SidebarBlock}>
       <h3 className={styles.SidebarBlock__title}>
         Plans:
       </h3>
@@ -15,4 +15,4 @@ const SliderBlock: React.FC = function SliderBlock() {
   )
 }
 
-export default SliderBlock
+export default SidebarBlock

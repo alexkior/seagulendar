@@ -3,13 +3,14 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(auto-fill, 64px);
-  row-gap: 16px;
-  column-gap: 32px;
+  grid-template-rows: 64px auto;
+  align-content: stretch;
+  justify-items: stretch;
+  gap: 32px;
 
 }
 

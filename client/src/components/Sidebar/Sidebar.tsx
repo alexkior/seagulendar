@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styles from './Sidebar.module.scss'
+import { SidebarBlockList } from './components/SidebarBlockList'
 
-import { SliderBlock } from './components/SliderBlock'
 
 const Sidebar: React.FC = function Sidebar() {
   return (
@@ -14,7 +14,8 @@ const Sidebar: React.FC = function Sidebar() {
         2022
       </h2>
 
-      <SliderBlock />
+      <SidebarBlockList />
+
     </section>
   )
 }
