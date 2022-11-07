@@ -1,6 +1,8 @@
 .Header {
   width: 100%;
   min-height: 64px;
+  max-width: 1270px;
+
   display: grid;
   grid-template-columns: repeat(7, 154px);
   grid-template-rows: 64px;

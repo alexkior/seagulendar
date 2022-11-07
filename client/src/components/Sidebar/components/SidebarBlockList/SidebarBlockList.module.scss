@@ -9,3 +9,48 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
+.SidebarBlock {
+  width: 100%;
+  min-height: 64px;
+  grid-column: 2 / 7;
+  grid-row: auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 64px repeat(auto-fill, 128px);
+  justify-items: stretch;
+  align-content: stretch;
+  row-gap: 32px;
+}
+
+.SidebarBlock__title {
+  min-height: 64px;
+  grid-row: 0 / 2;
+  font-size: 24px;
+  font-weight: 900;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+
+}
+
+.SidebarBlock__test_element {
+  background-color: #FAF3E9;
+  border-radius: 12px;
+  min-width: 156px;
+  min-height: 128px;
+  width: 100%;
+  height: 100%;
+}
+
+.SidebarBlock__test_element_empty {
+  background-color: #FAF3E9;
+  border-radius: 12px;
+  min-width: 156px;
+  min-height: 128px;
+  width: 100%;
+  height: 100%;
+  opacity: 50%;
+}
