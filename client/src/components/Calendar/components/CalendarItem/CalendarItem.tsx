@@ -18,7 +18,7 @@ const month = [
 ]
 const currentDate = new Date(Date.now())
 const createMonth = month[currentDate.getMonth()]
-const createDay = currentDate.getDay()
+const createDate = currentDate.getDate()
 
 interface CalendarItem {
   date: number;
@@ -38,7 +38,7 @@ const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
   
   return (
     <>
-      {createDay === date && createMonth === month ? (
+      {createDate === date && createMonth === month ? (
         <div
           className={styles.CalendarItem_currentDay}
         >

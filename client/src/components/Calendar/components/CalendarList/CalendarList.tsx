@@ -17,22 +17,25 @@ const fullDate = currentDate.toLocaleDateString('en-US', {
 
 const mockServerContent = [
   {
-    date: '11-November-2022',
+    user: 'user1',
+    date: 11,
+    month: 'November',
+    year: 2022,
     content: 'Some content to test it'
   },
   {
-    date: '14-November-2022',
+    user: 'user1',
+    date: 14,
+    month: 'November',
+    year: 2022,
     content: 'Some other content to test it'
   }
 ]
 
 
-function getContent(day: number, month: string, year: number) {
-  let result = JSON.stringify(mockServerContent[mockServerContent.findIndex((el) => Number(el.date.split('-')[0]) === day && el.date.split('-')[1] === month && Number(el.date.split('-')[2]) === year)])
-  if (result === undefined) {
-    result = ''
-  } 
-  return result
+function getContent(date: number, month: string, year: number) {
+  const result = JSON.stringify(mockServerContent[mockServerContent.findIndex((el) => el.date === date && el.month === month && el.year === year)])
+  return result !== undefined ? result : ''
 }
 
 
