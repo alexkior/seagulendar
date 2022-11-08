@@ -1,14 +1,17 @@
 import * as React from 'react'
 
-export default function useSelectedItem(value: number) {
-  const [newSelectedItem, setNewSelectedItem] = React.useState(value)
+const currentDate = new Date(Date.now())
+const createDate = currentDate.getDate()
 
-  console.log(newSelectedItem)
-  
+export default function useSelectedItem(value: number) {
+  console.log(value, 'useselecteditem value start')
+  const [newSelectedItem, setNewSelectedItem] = React.useState(createDate)
+
   if (value !== newSelectedItem) {
-    return setNewSelectedItem(value)
-  } else {
-    return newSelectedItem
+    setNewSelectedItem(value)
   }
+  console.log(newSelectedItem, 'useselecteditem usestate start')
+  
+  return newSelectedItem
 
 }
