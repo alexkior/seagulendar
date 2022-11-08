@@ -26,6 +26,7 @@
 
 .CalendarItem:active {
   background-color: #faf3e900;
+  color: #FAF3E9;
   background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
   transform: scale(1.1);
 }
@@ -75,6 +76,7 @@
 
 .CalendarItem_currentDay:active {
   background-color: #faf3e900;
+  color: #FAF3E9;
   background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
   transform: scale(1.1);
 }
