@@ -24,13 +24,18 @@ interface CalendarItem {
   date: number;
   month: string;
   day: string;
+  content: string;
 }
 
 const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
   date,
   month,
   day,
+  content
 }: CalendarItem) {
+
+  console.log(content)
+  
   return (
     <>
       {createDay === date && createMonth === month ? (
@@ -44,7 +49,7 @@ const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
         <div
           className={
             createMonth === month
-              ? styles.CalendarItem
+              ? (content === '' ? styles.CalendarItem : styles.CalendarItem_withContent)
               : styles.CalendarItem_notCurrentMonth
           }
         >

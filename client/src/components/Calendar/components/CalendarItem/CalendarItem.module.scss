@@ -25,7 +25,7 @@
 }
 
 .CalendarItem:active {
-  background-color: #faf3e900;
+  background-color: #00000000;
   color: #FAF3E9;
   background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
   transform: scale(1.1);
@@ -81,10 +81,44 @@
   transform: scale(1.1);
 }
 
+.CalendarItem_withContent {
+  background-color: #FF2E6A;
+  border-radius: 12px;
+  min-width: 156px;
+  min-height: 128px;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #FAF3E9;
+  font-size: 24px;
+  font-weight: 700;
+
+  animation: hoverout 1s;
+  transition: transform 1s;
+  cursor: pointer;
+}
+
+.CalendarItem_withContent:hover {
+  transform: scale(1.1);
+}
+
+.CalendarItem_withContent:active {
+  background-color: #faf3e900;
+  color: #FAF3E9;
+  background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
+  transform: scale(1.1);
+}
 
 .CalendarItem__seagull {
   height: 88px;
   animation: pulse 2s infinite;
+  user-select: none;
+
 }
 
 @keyframes pulse {

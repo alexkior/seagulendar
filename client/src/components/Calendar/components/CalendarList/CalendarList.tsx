@@ -15,6 +15,26 @@ const fullDate = currentDate.toLocaleDateString('en-US', {
   weekday: 'short',
 })
 
+const mockServerContent = [
+  {
+    date: '11-November-2022',
+    content: 'Some content to test it'
+  },
+  {
+    date: '14-November-2022',
+    content: 'Some other content to test it'
+  }
+]
+
+
+function getContent(day: number, month: string, year: number) {
+  let result = JSON.stringify(mockServerContent[mockServerContent.findIndex((el) => Number(el.date.split('-')[0]) === day && el.date.split('-')[1] === month && Number(el.date.split('-')[2]) === year)])
+  if (result === undefined) {
+    result = ''
+  } 
+  return result
+}
+
 
 function getFullWeeksStartAndEndInMonth (month: number, year: number) {
   const weeks = []
@@ -65,8 +85,9 @@ function getFullWeeksStartAndEndInMonth (month: number, year: number) {
       const date = new Date(year, month - sub, start + index)
       return {
         date: date.getDate(),
-        month: date.toLocaleString('en', {month: 'long'}),
-        day: date.toLocaleString('en', {weekday: 'short'}),
+        month: date.toLocaleString('en', { month: 'long' }),
+        day: date.toLocaleString('en', { weekday: 'short' }),
+        content: getContent(date.getDate(), date.toLocaleString('en', { month: 'long' }), date.getFullYear())
       }
     })
   }).flat(35)
@@ -88,7 +109,7 @@ const CalendarList: React.FC = function CalendarList() {
       className={styles.CalendarList}
     >
       {days.map((day, index) => 
-        <CalendarItem key={index} date={day.date} month={day.month} day={day.day} />
+        <CalendarItem key={index} date={day.date} month={day.month} day={day.day} content={day.content} />
       )}
     </motion.div>
   )
