@@ -69,7 +69,7 @@ function getFullWeeksStartAndEndInMonth (month: number, year: number) {
         day: date.toLocaleString('en', {weekday: 'short'}),
       }
     })
-  }).flat(Infinity)
+  }).flat(35)
 }
 console.log(
   'test',
