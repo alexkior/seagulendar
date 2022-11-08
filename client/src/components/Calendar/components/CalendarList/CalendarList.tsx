@@ -4,6 +4,81 @@ import styles from './CalendarList.module.scss'
 
 import { CalendarItem } from '../CalendarItem'
 
+const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+const currentDate = new Date(Date.now())
+const createMonth = month[currentDate.getMonth()]
+const createYear = currentDate.getFullYear()
+const currentMonth = currentDate.getMonth()
+
+const createDay = currentDate.getDay()
+const fullDate = currentDate.toLocaleDateString('en-US', {
+  weekday: 'short',
+})
+
+
+function getFullWeeksStartAndEndInMonth (month: number, year: number) {
+  const weeks = []
+  const firstDate = new Date(year, month, 1)
+  const lastDate = new Date(year, month + 1, 0)
+  const numDays = lastDate.getDate()
+
+  let start = 1
+  let end
+  if (firstDate.getDay() === 1) {
+    end = 7
+  } else if (firstDate.getDay() === 0) {
+    const preMonthEndDay = new Date(year, month, 0)
+    start = preMonthEndDay.getDate() - 6 + 1
+    end = 1
+  } else {
+    const preMonthEndDay = new Date(year, month, 0)
+    start = preMonthEndDay.getDate() + 1 - firstDate.getDay() + 1
+    end = 7 - firstDate.getDay() + 1
+    weeks.push({
+      start: start,
+      end: end
+    })
+    start = end + 1
+    end = end + 7
+  }
+  while (start <= numDays) {
+    weeks.push({
+      start: start,
+      end: end
+    })
+    start = end + 1
+    end = end + 7
+    end = start === 1 && end === 8 ? 1 : end
+    if (end > numDays && start <= numDays) {
+      end = end - numDays
+      weeks.push({
+        start: start,
+        end: end
+      })
+      break
+    }
+  }
+
+  return weeks.map(({start, end}, index) => {
+    const sub = +(start > end && index === 0)
+    return Array.from({length: 7}, (_, index) => {
+      const date = new Date(year, month - sub, start + index)
+      return {
+        date: date.getDate(),
+        month: date.toLocaleString('en', {month: 'long'}),
+        day: date.toLocaleString('en', {weekday: 'short'}),
+      }
+    })
+  }).flat(Infinity)
+}
+console.log(
+  'test',
+  getFullWeeksStartAndEndInMonth(currentMonth, createYear)
+)
+
+
+const days = getFullWeeksStartAndEndInMonth(currentMonth, createYear)
+
 const CalendarList: React.FC = function CalendarList() {
   return (
     <motion.div
@@ -12,7 +87,9 @@ const CalendarList: React.FC = function CalendarList() {
       transition={{ duration: 1 }}
       className={styles.CalendarList}
     >
-      <CalendarItem />
+      {days.map((day, index) => 
+        <CalendarItem key={index} date={day.date} month={day.month} day={day.day} />
+      )}
     </motion.div>
   )
 }
