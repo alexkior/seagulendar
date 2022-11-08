@@ -14,12 +14,13 @@
   font-size: 32px;
   font-weight: 700;
   animation: hoverout 1s;
+  transition: transform 1s;
 
   cursor: pointer;
 }
 
 .CalendarItem:hover {
-  animation: hover 1s;
+  transform: scale(1.1);
 }
 
 .CalendarItem_notCurrentMonth {
