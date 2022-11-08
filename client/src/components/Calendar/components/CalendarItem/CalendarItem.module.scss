@@ -13,6 +13,13 @@
   color: black;
   font-size: 32px;
   font-weight: 700;
+  animation: hoverout 1s;
+
+  cursor: pointer;
+}
+
+.CalendarItem:hover {
+  animation: hover 1s;
 }
 
 .CalendarItem_notCurrentMonth {
@@ -64,5 +71,23 @@
   }
   100% {
     transform: scale(0.9) rotate(0);
+  }
+}
+
+@keyframes hover {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes hoverout {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
