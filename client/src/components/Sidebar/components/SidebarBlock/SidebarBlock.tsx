@@ -1,7 +1,8 @@
 import * as React from 'react'
+
 import styles from './SidebarBlock.module.scss'
 
-const SidebarBlock: React.FC = function SidebarBlock() {
+const SidebarBlock: React.FC = function SidebarBlock() {  
   return (
     <div className={styles.SidebarBlock}>
       <h3 className={styles.SidebarBlock__title}>

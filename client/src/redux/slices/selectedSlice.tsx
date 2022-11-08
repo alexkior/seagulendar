@@ -5,7 +5,9 @@ export const selectedSlice = createSlice({
   initialState: {
     selectedItem: {
       date: 0,
-      month: ''
+      month: '',
+      day: '',
+      content: ''
     },
   },
   reducers: {

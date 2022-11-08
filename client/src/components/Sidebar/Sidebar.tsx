@@ -1,9 +1,13 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
+import { useSelector } from '../../redux/store'
+
 import styles from './Sidebar.module.scss'
 import { SidebarBlockList } from './components/SidebarBlockList'
 
 const Sidebar: React.FC = function Sidebar() {
+  const selected = useSelector((state: any) => state.selected.selectedItem)
+
   return (
     <motion.section
       initial={{ x: '-500px', opacity: 0 }}
@@ -12,7 +16,7 @@ const Sidebar: React.FC = function Sidebar() {
       className={styles.Sidebar}
     >
       <h2 className={styles.Sidebar__title}>
-        Date Month
+        {selected.date} {selected.month}
       </h2>
 
       <h2 className={styles.Sidebar__subtitle}>

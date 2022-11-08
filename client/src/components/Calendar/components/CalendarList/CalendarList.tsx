@@ -1,5 +1,9 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
+import { useSelector } from '../../../../redux/store'
+import { useDispatch } from 'react-redux'
+import { select } from '../../../../redux/slices/selectedSlice'
+
 import styles from './CalendarList.module.scss'
 
 import { CalendarItem } from '../CalendarItem'
@@ -11,6 +15,7 @@ const createYear = currentDate.getFullYear()
 const currentMonth = currentDate.getMonth()
 
 const createDate = currentDate.getDate()
+const createDay = currentDate.getDay()
 const fullDate = currentDate.toLocaleDateString('en-US', {
   weekday: 'short',
 })
@@ -108,7 +113,19 @@ console.log(
 const days = getFullWeeksStartAndEndInMonth(currentMonth, createYear)
 
 const CalendarList: React.FC = function CalendarList() {
-  
+  // const selected = useSelector((state: any) => state.selected.selectedItem)
+  const dispatch = useDispatch()
+
+  React.useEffect(() => {
+    dispatch(
+      select({
+        date: createDate,
+        month: createMonth,       
+        day: createDay,
+        content: days[days.findIndex((el) => el.date === createDate && el.month === createMonth)].content
+      }))
+  }, [])
+
   return (
     <motion.div
       initial={{ x: '100px', opacity: 0 }}

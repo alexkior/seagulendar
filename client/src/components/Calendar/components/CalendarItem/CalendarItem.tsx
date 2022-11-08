@@ -30,7 +30,6 @@ interface CalendarItem {
   month: string;
   day: string;
   content: string;
-  // onClick: () => void;
 }
 
 const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
@@ -42,8 +41,6 @@ const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
   const selected = useSelector((state: any) => state.selected.selectedItem)
   const dispatch = useDispatch()
   
-  const selectedItem = createDate
-  
   console.log(content)
   
   return (
@@ -54,7 +51,9 @@ const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
             () => dispatch(
               select({
                 date: date,
-                month: month
+                month: month,       
+                day: day,
+                content: content
               })
             )
           }
@@ -68,7 +67,9 @@ const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
             () => dispatch(
               select({
                 date: date,
-                month: month
+                month: month,       
+                day: day,
+                content: content
               })
             )
           }
