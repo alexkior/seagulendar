@@ -34,22 +34,24 @@ const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
   content
 }: CalendarItem) {
 
+  const selectedItem = createDate
+
   console.log(content)
   
   return (
     <>
       {createDate === date && createMonth === month ? (
         <div
-          className={styles.CalendarItem_currentDay}
+          className={selectedItem === createDate ? styles.CalendarItem_selected : styles.CalendarItem_currentDay}
         >
-          <p>{date}</p>
+          {/* <p>{date}</p> */}
           <img className={styles.CalendarItem__seagull} src={seagul} alt="seagull" /> 
         </div>
       ) : (
         <div
           className={
             createMonth === month
-              ? (content === '' ? styles.CalendarItem : styles.CalendarItem_withContent)
+              ? (selectedItem === date ? styles.CalendarItem_selected : (content === '' ? styles.CalendarItem : styles.CalendarItem_withContent))
               : styles.CalendarItem_notCurrentMonth
           }
         >

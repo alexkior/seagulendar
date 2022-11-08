@@ -10,7 +10,7 @@ const createMonth = month[currentDate.getMonth()]
 const createYear = currentDate.getFullYear()
 const currentMonth = currentDate.getMonth()
 
-const createDay = currentDate.getDay()
+const createDate = currentDate.getDate()
 const fullDate = currentDate.toLocaleDateString('en-US', {
   weekday: 'short',
 })
@@ -104,6 +104,7 @@ console.log(
 const days = getFullWeeksStartAndEndInMonth(currentMonth, createYear)
 
 const CalendarList: React.FC = function CalendarList() {
+
   return (
     <motion.div
       initial={{ x: '100px', opacity: 0 }}
@@ -112,7 +113,13 @@ const CalendarList: React.FC = function CalendarList() {
       className={styles.CalendarList}
     >
       {days.map((day, index) => 
-        <CalendarItem key={index} date={day.date} month={day.month} day={day.day} content={day.content} />
+        <CalendarItem
+          key={index} 
+          date={day.date} 
+          month={day.month} 
+          day={day.day} 
+          content={day.content} 
+        />
       )}
     </motion.div>
   )

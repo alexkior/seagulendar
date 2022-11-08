@@ -119,10 +119,10 @@
   height: 88px;
   animation: pulse 2s infinite;
   user-select: none;
-
+  -webkit-user-drag: none;
 }
 
-.CalendarItem_chosen {
+.CalendarItem_selected {
   background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
   border-radius: 12px;
   min-width: 156px;
@@ -135,7 +135,7 @@
   align-items: center;
   justify-content: center;
 
-  color: black;
+  color: #FAF3E9;
   font-size: 32px;
   font-weight: 700;
   transform: scale(1.1);
