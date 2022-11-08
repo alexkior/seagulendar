@@ -2,6 +2,8 @@ import * as React from 'react'
 import { motion } from 'framer-motion'
 import styles from './CalendarList.module.scss'
 
+import { CalendarItem } from '../CalendarItem'
+
 const CalendarList: React.FC = function CalendarList() {
   return (
     <motion.div
@@ -10,37 +12,7 @@ const CalendarList: React.FC = function CalendarList() {
       transition={{ duration: 1 }}
       className={styles.CalendarList}
     >
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
-      <div className={styles.Calendar__test_element} />
+      <CalendarItem />
     </motion.div>
   )
 }
