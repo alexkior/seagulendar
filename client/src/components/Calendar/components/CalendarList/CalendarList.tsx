@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import styles from './CalendarList.module.scss'
 
 import { CalendarItem } from '../CalendarItem'
+import useSelectedItem from '../../../../hooks/useSelectedItem'
 
 const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const currentDate = new Date(Date.now())
@@ -105,6 +106,10 @@ const days = getFullWeeksStartAndEndInMonth(currentMonth, createYear)
 
 const CalendarList: React.FC = function CalendarList() {
 
+  const handleSelectValue = (value: number) => {
+    useSelectedItem(value)
+  }
+  
   return (
     <motion.div
       initial={{ x: '100px', opacity: 0 }}
@@ -118,7 +123,8 @@ const CalendarList: React.FC = function CalendarList() {
           date={day.date} 
           month={day.month} 
           day={day.day} 
-          content={day.content} 
+          content={day.content}
+          onClick={() => handleSelectValue(day.date)}
         />
       )}
     </motion.div>

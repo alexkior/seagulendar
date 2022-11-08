@@ -25,18 +25,21 @@ interface CalendarItem {
   month: string;
   day: string;
   content: string;
+  onClick: () => void;
 }
 
 const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
   date,
   month,
   day,
-  content
+  content,
 }: CalendarItem) {
+
 
   const selectedItem = createDate
 
   console.log(content)
+  // useNewSelectedItem(date)
   
   return (
     <>
@@ -44,7 +47,6 @@ const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
         <div
           className={selectedItem === createDate ? styles.CalendarItem_selected : styles.CalendarItem_currentDay}
         >
-          {/* <p>{date}</p> */}
           <img className={styles.CalendarItem__seagull} src={seagul} alt="seagull" /> 
         </div>
       ) : (
