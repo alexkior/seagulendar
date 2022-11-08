@@ -14,8 +14,9 @@
   color: black;
   font-size: 32px;
   font-weight: 700;
-  animation: hoverout 1s;
-  transition: transform 1s;
+
+  animation: hoverout 0.5s;
+  transition: transform 0.5s;
 
   cursor: pointer;
 }
@@ -61,11 +62,11 @@
   justify-content: center;
 
   color: #FAF3E9;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
 
-  animation: hoverout 1s;
-  transition: transform 1s;
+  animation: hoverout 0.5s;
+  transition: transform 0.5s;
   cursor: pointer;
 
 }
@@ -98,8 +99,8 @@
   font-size: 24px;
   font-weight: 700;
 
-  animation: hoverout 1s;
-  transition: transform 1s;
+  animation: hoverout 0.5s;
+  transition: transform 0.5s;
   cursor: pointer;
 }
 
@@ -119,6 +120,27 @@
   animation: pulse 2s infinite;
   user-select: none;
 
+}
+
+.CalendarItem_chosen {
+  background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
+  border-radius: 12px;
+  min-width: 156px;
+  min-height: 128px;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: black;
+  font-size: 32px;
+  font-weight: 700;
+  transform: scale(1.1);
+
+  cursor: pointer;
 }
 
 @keyframes pulse {
