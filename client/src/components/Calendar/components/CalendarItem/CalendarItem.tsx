@@ -1,7 +1,11 @@
 import * as React from 'react'
+
+import { useSelector } from '../../../../redux/store'
+import { useDispatch } from 'react-redux'
+import { select } from '../../../../redux/slices/selectedSlice'
+
 import styles from './CalendarItem.module.scss'
 import seagul from '../../../../assets/seagull.svg'
-import useSelectedItem from '../../../../hooks/useSelectedItem'
 
 const month = [
   'January',
@@ -26,7 +30,7 @@ interface CalendarItem {
   month: string;
   day: string;
   content: string;
-  onClick: () => void;
+  // onClick: () => void;
 }
 
 const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
@@ -35,36 +39,42 @@ const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
   day,
   content,
 }: CalendarItem) {
-
-  const [state, setState] = React.useState(0)
-  const hookDate = useSelectedItem(state)
+  const selected = useSelector((state: any) => state.selected.selectedItem)
+  const dispatch = useDispatch()
+  
   const selectedItem = createDate
   
   console.log(content)
-
-  console.log(hookDate, 'Instide item')
-  // React.useEffect(() => {
-  //   if (hookDate !== state) {
-      
-  //     setState(0)
-  //   }
-  // }, [hookDate])
   
   return (
     <>
       {createDate === date && createMonth === month ? (
         <div
-          onClick={() => setState(date)}
-          className={hookDate === createDate ? styles.CalendarItem_selected : styles.CalendarItem_currentDay}
+          onClick={
+            () => dispatch(
+              select({
+                date: date,
+                month: month
+              })
+            )
+          }
+          className={selected?.date === createDate ? styles.CalendarItem_selected : styles.CalendarItem_currentDay}
         >
           <img className={styles.CalendarItem__seagull} src={seagul} alt="seagull" /> 
         </div>
       ) : (
         <div
-          onClick={() => setState(date)}
+          onClick={
+            () => dispatch(
+              select({
+                date: date,
+                month: month
+              })
+            )
+          }
           className={
             createMonth === month
-              ? (hookDate === date ? styles.CalendarItem_selected : (content === '' ? styles.CalendarItem : styles.CalendarItem_withContent))
+              ? (selected?.date === date ? styles.CalendarItem_selected : (content === '' ? styles.CalendarItem : styles.CalendarItem_withContent))
               : styles.CalendarItem_notCurrentMonth
           }
         >
