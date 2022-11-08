@@ -13,10 +13,9 @@ const SidebarBlockList: React.FC = function SidebarBlockList() {
           Plans:
         </h3>
 
-        <div className={styles.SidebarBlock__test_element_empty}>
-          <p>
+        <div className={selected.content ? styles.SidebarBlock__test_element : styles.SidebarBlock__test_element_empty}>
+          <p className={styles.SidebarBlock__test_element_text}>
             {selected.content}
-
           </p>
         </div>
       </div>
