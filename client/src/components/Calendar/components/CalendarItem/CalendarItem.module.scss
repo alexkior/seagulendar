@@ -24,6 +24,12 @@
   transform: scale(1.1);
 }
 
+.CalendarItem:active {
+  background-color: #faf3e900;
+  background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
+  transform: scale(1.1);
+}
+
 .CalendarItem_notCurrentMonth {
   border-radius: 12px;
   min-width: 156px;
@@ -56,7 +62,23 @@
   color: #FAF3E9;
   font-size: 24px;
   font-weight: 700;
+
+  animation: hoverout 1s;
+  transition: transform 1s;
+  cursor: pointer;
+
 }
+
+.CalendarItem_currentDay:hover {
+  transform: scale(1.1);
+}
+
+.CalendarItem_currentDay:active {
+  background-color: #faf3e900;
+  background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
+  transform: scale(1.1);
+}
+
 
 .CalendarItem__seagull {
   height: 88px;
