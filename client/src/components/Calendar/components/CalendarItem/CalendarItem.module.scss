@@ -15,8 +15,7 @@
   font-size: 32px;
   font-weight: 700;
 
-  animation: hoverout 0.5s;
-  transition: transform 0.5s;
+  transition: transform 0.2s;
 
   cursor: pointer;
 }
@@ -29,7 +28,7 @@
   background-color: #00000000;
   color: #FAF3E9;
   background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .CalendarItem_notCurrentMonth {
@@ -65,8 +64,7 @@
   font-size: 32px;
   font-weight: 700;
 
-  animation: hoverout 0.5s;
-  transition: transform 0.5s;
+  transition: transform 0.2s;
   cursor: pointer;
 
 }
@@ -79,7 +77,7 @@
   background-color: #faf3e900;
   color: #FAF3E9;
   background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .CalendarItem_withContent {
@@ -99,8 +97,7 @@
   font-size: 32px;
   font-weight: 700;
 
-  animation: hoverout 0.5s;
-  transition: transform 0.5s;
+  transition: transform 0.2s;
   cursor: pointer;
 }
 
@@ -112,7 +109,7 @@
   background-color: #faf3e900;
   color: #FAF3E9;
   background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .CalendarItem__seagull {
@@ -138,9 +135,14 @@
   color: #FAF3E9;
   font-size: 32px;
   font-weight: 700;
-  transform: scale(1.1);
+  transform: scale(1);
 
+  transition: transform 0.2s;
   cursor: pointer;
+}
+
+.CalendarItem_selected:hover {
+  transform: scale(1.1);
 }
 
 @keyframes pulse {
@@ -155,23 +157,5 @@
   }
   100% {
     transform: scale(0.9) rotate(0);
-  }
-}
-
-@keyframes hover {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes hoverout {
-  0% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }

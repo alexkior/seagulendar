@@ -10,16 +10,69 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  cursor: pointer;
+
+  animation: hoverout 0.2s;
+  transition: transform 0.2s;
+
 }
 
+.SidebarItem:active {
+  transform: scale(0.95);
+}
+
+
 .SidebarItem_empty {
-  background-color: #FAF3E9;
+  background-color: rgb(250, 243, 233, 0.5);
   border-radius: 12px;
   min-width: 156px;
   min-height: 128px;
   width: 100%;
   height: 100%;
-  opacity: 50%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  border: none;
+
+  animation: hoverout 0.2s;
+  transition: transform 0.2s;
+}
+
+.SidebarItem_empty:hover {
+  transform: scale(1.05);
+}
+
+.SidebarItem_empty:active {
+  transform: scale(1);
+}
+
+.SidebarItem_create_button {
+  background: none;
+  width: 48px;
+  height: 48px;
+  font-size: 88px;
+  font-weight: 500;
+  white-space: wrap;
+  text-align: center;
+  user-select: none;
+  color: #FAF3E9;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0px;
+  padding: 0px;
+
+  cursor: pointer;
+
 }
 
 .SidebarItem_text {
@@ -29,5 +82,6 @@
   font-weight: 400;
   white-space: wrap;
   text-align: center;
+  user-select: none;
 
 }

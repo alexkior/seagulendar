@@ -1,6 +1,7 @@
 import * as React from 'react'
-import { useSelector } from '../../../../redux/store'
+import { motion } from 'framer-motion'
 
+import { useSelector } from '../../../../redux/store'
 
 import { SidebarItem } from '../SidebarItem'
 
@@ -21,15 +22,18 @@ const SidebarBlock: React.FC = function SidebarBlock() {
           <SidebarItem
             key={index}
             text={text}
+            empty={false}
           />
         )}
         <SidebarItem
           text={''}
+          empty={true}
         />
       
       </>) : (<>
         <SidebarItem
           text={''}
+          empty={true}
         />
       </>)}
 
