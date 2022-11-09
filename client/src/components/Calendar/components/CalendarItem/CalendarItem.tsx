@@ -28,13 +28,15 @@ const createDate = currentDate.getDate()
 interface CalendarItem {
   date: number;
   month: string;
+  year: number;
   day: string;
-  content: string;
+  content: string | string[];
 }
 
 const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
   date,
   month,
+  year,
   day,
   content,
 }: CalendarItem) {
@@ -51,7 +53,8 @@ const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
             () => dispatch(
               select({
                 date: date,
-                month: month,       
+                month: month, 
+                year: year,
                 day: day,
                 content: content
               })
@@ -67,7 +70,8 @@ const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
             () => dispatch(
               select({
                 date: date,
-                month: month,       
+                month: month, 
+                year: year,
                 day: day,
                 content: content
               })

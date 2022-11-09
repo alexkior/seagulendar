@@ -28,7 +28,9 @@ const mockServerContent = [
     date: 11,
     month: 'November',
     year: 2022,
-    content: 'Some content to test it'
+    content: [
+      'Some content to test it'
+    ]
   },
   {
     id: 2,
@@ -37,13 +39,16 @@ const mockServerContent = [
     date: 14,
     month: 'November',
     year: 2022,
-    content: 'Some other content to test it'
+    content: [
+      'Some other content to test it',
+      'And some other content to test it'
+    ]
   }
 ]
 
 
 function getContent(date: number, month: string, year: number) {
-  const result = JSON.stringify(mockServerContent[mockServerContent.findIndex((el) => el.date === date && el.month === month && el.year === year)])
+  const result = mockServerContent[mockServerContent.findIndex((el) => el.date === date && el.month === month && el.year === year)]?.content
   return result !== undefined ? result : ''
 }
 
@@ -98,6 +103,7 @@ function getFullWeeksStartAndEndInMonth (month: number, year: number) {
       return {
         date: date.getDate(),
         month: date.toLocaleString('en', { month: 'long' }),
+        year: date.getFullYear(),
         day: date.toLocaleString('en', { weekday: 'short' }),
         content: getContent(date.getDate(), date.toLocaleString('en', { month: 'long' }), date.getFullYear())
       }
@@ -120,7 +126,8 @@ const CalendarList: React.FC = function CalendarList() {
     dispatch(
       select({
         date: createDate,
-        month: createMonth,       
+        month: createMonth, 
+        year: createYear,
         day: createDay,
         content: days[days.findIndex((el) => el.date === createDate && el.month === createMonth)].content
       }))
@@ -138,6 +145,7 @@ const CalendarList: React.FC = function CalendarList() {
           key={index} 
           date={day.date} 
           month={day.month} 
+          year={day.year}
           day={day.day} 
           content={day.content}
         />

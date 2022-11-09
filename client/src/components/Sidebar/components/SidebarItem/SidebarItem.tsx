@@ -1,9 +1,16 @@
 import * as React from 'react'
 import styles from './SidebarItem.module.scss'
 
-const SidebarItem: React.FC = function SidebarItem() {
+interface SidebarItem {
+  text: string;
+}
+
+const SidebarItem: React.FC<SidebarItem> = function SidebarItem({text}:SidebarItem) {
   return (
-    <div className={styles.SidebarItem}>
+    <div className={text !== '' ? styles.SidebarItem : styles.SidebarItem_empty}>
+      <p className={styles.SidebarItem_text}>
+        {text}
+      </p>
     </div>
   )
 }

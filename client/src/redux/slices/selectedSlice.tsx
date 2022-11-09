@@ -6,6 +6,7 @@ export const selectedSlice = createSlice({
     selectedItem: {
       date: 0,
       month: '',
+      year: 0,
       day: '',
       content: ''
     },

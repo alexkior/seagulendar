@@ -20,7 +20,7 @@ const Sidebar: React.FC = function Sidebar() {
       </h2>
 
       <h2 className={styles.Sidebar__subtitle}>
-        2022
+        {selected.year}
       </h2>
 
       <SidebarBlockList />
