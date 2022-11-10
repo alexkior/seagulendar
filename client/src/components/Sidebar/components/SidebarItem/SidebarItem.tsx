@@ -6,33 +6,26 @@ import styles from './SidebarItem.module.scss'
 interface SidebarItem {
   text: string;
   empty: boolean;
+  onClick?: () => void;
 }
 
 const SidebarItem: React.FC<SidebarItem> = function SidebarItem({text, empty}:SidebarItem) {
   return (
-    <>
+    <button className={empty ? styles.SidebarItem_empty : styles.SidebarItem}>
       {empty ? (
         <>
-          <button
-            className={styles.SidebarItem_empty}
-          >
-            <p className={styles.SidebarItem_create_button}>
-                + 
-            </p>
-          </button>
+          <p className={styles.SidebarItem_create_button}>
+              + 
+          </p>
         </>
       ) : (
         <>
-          <div 
-            className={styles.SidebarItem}
-          >
-            <p className={styles.SidebarItem_text}>
-              {text}
-            </p>
-          </div>
+          <p className={styles.SidebarItem_text}>
+            {text}
+          </p>
         </>
       )}
-    </>
+    </button>
   )
 }
 

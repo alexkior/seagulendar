@@ -11,17 +11,23 @@
   align-items: center;
   justify-content: center;
 
+  margin: 0px;
+  padding: 0px;
   cursor: pointer;
+  border: none;
 
   animation: hoverout 0.2s;
   transition: transform 0.2s;
 
 }
 
-.SidebarItem:active {
-  transform: scale(0.95);
+.SidebarItem:hover {
+  transform: scale(1.05);
 }
 
+.SidebarItem:active {
+  transform: scale(1);
+}
 
 .SidebarItem_empty {
   background-color: rgb(250, 243, 233, 0.5);

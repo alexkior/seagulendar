@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
+import ReactCardFlip from 'react-card-flip'
 
 import { useSelector } from '../../../../redux/store'
 
@@ -11,13 +12,14 @@ import styles from './SidebarBlock.module.scss'
 const SidebarBlock: React.FC = function SidebarBlock() {  
   const selected = useSelector((state: any) => state.selected.selectedItem)
   const texts = selected.content
+
   return (
     <div className={styles.SidebarBlock}>
       <h3 className={styles.SidebarBlock__title}>
         Plans:
       </h3>
 
-      {texts ? (<>
+      {texts && (<>
         {texts.map((text: string, index: number) => 
           <SidebarItem
             key={index}
@@ -25,19 +27,12 @@ const SidebarBlock: React.FC = function SidebarBlock() {
             empty={false}
           />
         )}
-        <SidebarItem
-          text={''}
-          empty={true}
-        />
-      
-      </>) : (<>
-        <SidebarItem
-          text={''}
-          empty={true}
-        />
       </>)}
 
-
+      <SidebarItem
+        text={''}
+        empty={true}
+      />
     </div>
   )
 }
