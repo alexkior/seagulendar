@@ -48,7 +48,7 @@
   border: none;
 
   animation: hoverout 0.2s;
-  transition: transform 0.2s;
+  transition: transform 0.3s;
 }
 
 .SidebarItem_empty:hover {
@@ -56,7 +56,9 @@
 }
 
 .SidebarItem_empty:active {
-  transform: scale(1);
+  // transform: scale(1);
+  transform: rotateY(180deg);
+
 }
 
 .SidebarItem_create_button {

@@ -9,9 +9,12 @@ interface SidebarItem {
   onClick?: () => void;
 }
 
-const SidebarItem: React.FC<SidebarItem> = function SidebarItem({text, empty}:SidebarItem) {
+const SidebarItem: React.FC<SidebarItem> = function SidebarItem({ text, empty }: SidebarItem) {
+  const [ itemOpen, setItemOpen ] = React.useState(true)
+  
   return (
-    <button className={empty ? styles.SidebarItem_empty : styles.SidebarItem}>
+    <button
+      className={empty ? styles.SidebarItem_empty : styles.SidebarItem}>
       {empty ? (
         <>
           <p className={styles.SidebarItem_create_button}>
