@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import { select } from '../../../../redux/slices/selectedSlice'
 
 import styles from './CalendarItem.module.scss'
-import seagul from '../../../../assets/seagull.svg'
+import seagul from '../../../../assets/img/seagull.svg'
 
 const month = [
   'January',

@@ -1,19 +1,10 @@
 // descriptive colors !!do not use these variables directly!!
-$_aqua-blue: aqua;
-
-$_black: #000;
-
-$_straw-brown: #D7C078;
-
-$_reef-green: #A1A332;
-
-$_light-grey: #424242;
-$_medium-grey: #303030;
-$_nero-grey: #212121;
-
-$_brick-red: #B62321;
-
+$_ivory-white: #FAF3E9;
+$_ivory-white-fadad: rgba(250, 243, 233, 0.5);
+$_pink-red: #FF2E6A;
+$_black: #1C1C1C;
 $_white: #fff;
+$_orange-pink-gradient: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
 
 // functional color scheme !!use it in developing!!
 $background--primary: $_light-grey;
