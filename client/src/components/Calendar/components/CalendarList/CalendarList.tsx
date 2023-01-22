@@ -26,8 +26,8 @@ const mockServerContent = [
     user_id: 1,
     user_name: 'user1',
     date: 11,
-    month: 'November',
-    year: 2022,
+    month: 'January',
+    year: 2023,
     content: [
       'Some content to test it'
     ]
@@ -37,8 +37,8 @@ const mockServerContent = [
     user_id: 2,
     user_name: 'user1',
     date: 14,
-    month: 'November',
-    year: 2022,
+    month: 'January',
+    year: 2023,
     content: [
       'Some other content to test it',
       'And some other content to test it'

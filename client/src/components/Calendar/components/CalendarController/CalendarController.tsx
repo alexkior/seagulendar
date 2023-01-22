@@ -11,13 +11,13 @@ const CalendarController: React.FC = function CalendarController() {
       className={styles.CalendarController}
     >
       <div className={styles.CalendarController__previous}>
-        October 2022
+        December 2022
       </div>
       <div className={styles.CalendarController__current}>
-        November 2022
+        January 2023
       </div>
       <div className={styles.CalendarController__next}>
-        December 2022
+        February 2023
       </div>
     </motion.div>
   )
