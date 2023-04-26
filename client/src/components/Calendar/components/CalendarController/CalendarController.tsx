@@ -56,13 +56,13 @@ const CalendarController: React.FC = function CalendarController() {
       className={styles.CalendarController}
     >
       <div className={styles.CalendarController__previous} onClick={handlePreviousMonth}>
-        {month[month.indexOf(selectedMonth)- 1]} {selectedYear}
+        {month[month.indexOf(selectedMonth)-1 === -1 ? 11 : (month.indexOf(selectedMonth)- 1)]} {selectedYear}
       </div>
       <div className={styles.CalendarController__current}>
         {selectedMonth} {selectedYear}
       </div>
       <div className={styles.CalendarController__next} onClick={handleNextMonth}>
-        {month[month.indexOf(selectedMonth)+ 1]} {selectedYear}
+        {month[month.indexOf(selectedMonth)+ 1 === 12 ? 0 : month.indexOf(selectedMonth)+ 1]} {selectedYear}
       </div>
     </motion.div>
   )
