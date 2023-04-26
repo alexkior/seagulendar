@@ -59,7 +59,7 @@ const CalendarList: React.FC<CalendarListProps> = function CalendarList(props) {
         })
       )
     }
-  }, [days])
+  }, [])
 
   return (
     <motion.div

@@ -78,8 +78,8 @@ const CalendarItem: React.FC<CalendarItem> = function CalendarItem(props) {
         <div
           onClick={handleSelectDay}
           className={
-            createMonth === month
-              ? (selectedDay?.date === date ? styles.CalendarItem_selected : (content === '' ? styles.CalendarItem : styles.CalendarItem_withContent))
+            selectedMonth === month
+              ? (selectedDay?.date === date && selectedMonth === selectedDay?.month && selectedYear === selectedDay?.year ? styles.CalendarItem_selected : (content === '' ? styles.CalendarItem : styles.CalendarItem_withContent))
               : styles.CalendarItem_notCurrentMonth
           }
         >
