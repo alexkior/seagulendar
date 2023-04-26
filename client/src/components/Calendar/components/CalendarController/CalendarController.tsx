@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import styles from './CalendarController.module.scss'
 import { useSelector } from '../../../../redux/store'
 import { useDispatch } from 'react-redux'
-import { selectDay } from '../../../../redux/slices/selectedDaySlice'
 import { selectMonth } from '../../../../redux/slices/selectedMonthSlice'
 import { selectYear } from '../../../../redux/slices/selectedYearSlice'
 
@@ -24,7 +23,6 @@ const month = [
 
 
 const CalendarController: React.FC = function CalendarController() {
-  const selectedDay = useSelector((state: any) => state.selectedDay.selectedDay)
   const selectedMonth = useSelector((state: any) => state.selectedMonth.selectedMonth)
   const selectedYear = useSelector((state: any) => state.selectedYear.selectedYear)
   const dispatch = useDispatch()

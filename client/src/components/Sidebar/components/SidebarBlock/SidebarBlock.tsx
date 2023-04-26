@@ -1,10 +1,6 @@
 import * as React from 'react'
-import { motion } from 'framer-motion'
-
 import { useSelector } from '../../../../redux/store'
-
 import { SidebarItem } from '../SidebarItem'
-
 import styles from './SidebarBlock.module.scss'
 
 

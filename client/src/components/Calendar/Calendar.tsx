@@ -5,21 +5,8 @@ import { CalendarController } from './components/CalendarController'
 import { CalendarHeader } from './components/CalendarHeader'
 import { CalendarList } from './components/CalendarList'
 import { useSelector } from '../../redux/store'
-import { useDispatch } from 'react-redux'
-import selectedYearSlice from '../../redux/slices/selectedYearSlice';
-
 
 const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-const currentDate = new Date(Date.now())
-const createMonth = month[currentDate.getMonth()]
-const createYear = currentDate.getFullYear()
-const currentMonth = currentDate.getMonth()
-
-const createDate = currentDate.getDate()
-const createDay = currentDate.getDay()
-const fullDate = currentDate.toLocaleDateString('en-US', {
-  weekday: 'short',
-})
 
 const mockServerContent = [
   {
@@ -112,11 +99,8 @@ function getFullWeeksStartAndEndInMonth (month: number, year: number) {
   }).flat(35)
 }
 const Calendar: React.FC = function Calendar() {
-  const selectedDay = useSelector((state: any) => state.selectedDay.selectedDay)
   const selectedMonth = useSelector((state: any) => state.selectedMonth.selectedMonth)
   const selectedYear = useSelector((state: any) => state.selectedYear.selectedYear)
-
-  const dispatch = useDispatch()
 
   const [days, setDays] = React.useState([{}])
   

@@ -1,6 +1,4 @@
 import * as React from 'react'
-import { motion } from 'framer-motion'
-
 import styles from './SidebarItem.module.scss'
 
 interface SidebarItem {
@@ -10,8 +8,6 @@ interface SidebarItem {
 }
 
 const SidebarItem: React.FC<SidebarItem> = function SidebarItem({ text, empty }: SidebarItem) {
-  const [ itemOpen, setItemOpen ] = React.useState(true)
-  
   return (
     <button
       className={empty ? styles.SidebarItem_empty : styles.SidebarItem}>

@@ -25,13 +25,8 @@ const month = [
 const currentDate = new Date(Date.now())
 const createMonth = month[currentDate.getMonth()]
 const createYear = currentDate.getFullYear()
-const currentMonth = currentDate.getMonth()
-
 const createDate = currentDate.getDate()
 const createDay = currentDate.getDay()
-const fullDate = currentDate.toLocaleDateString('en-US', {
-  weekday: 'short',
-})
 
 interface CalendarListProps {
   days: any;
@@ -39,7 +34,6 @@ interface CalendarListProps {
 
 const CalendarList: React.FC<CalendarListProps> = function CalendarList(props) {
   const { days } = props
-  const selectedDay = useSelector((state: any) => state.selectedDay.selectedDay)
   const dispatch = useDispatch()
 
   React.useEffect(() => {
