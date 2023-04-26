@@ -6,7 +6,7 @@ import styles from './Sidebar.module.scss'
 import { SidebarBlockList } from './components/SidebarBlockList'
 
 const Sidebar: React.FC = function Sidebar() {
-  const selected = useSelector((state: any) => state.selected.selectedItem)
+  const selectedDay = useSelector((state: any) => state.selectedDay.selectedDay)
 
   return (
     <motion.section
@@ -16,11 +16,11 @@ const Sidebar: React.FC = function Sidebar() {
       className={styles.Sidebar}
     >
       <h2 className={styles.Sidebar__title}>
-        {selected.date} {selected.month}
+        {selectedDay.date} {selectedDay.month}
       </h2>
 
       <h2 className={styles.Sidebar__subtitle}>
-        {selected.year}
+        {selectedDay.year}
       </h2>
 
       <SidebarBlockList />

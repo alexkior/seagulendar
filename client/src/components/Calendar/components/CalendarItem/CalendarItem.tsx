@@ -2,12 +2,14 @@ import * as React from 'react'
 
 import { useSelector } from '../../../../redux/store'
 import { useDispatch } from 'react-redux'
-import { select } from '../../../../redux/slices/selectedSlice'
+import { selectDay } from '../../../../redux/slices/selectedDaySlice'
+import { selectMonth } from '../../../../redux/slices/selectedMonthSlice'
+import { selectYear } from '../../../../redux/slices/selectedYearSlice'
 
 import styles from './CalendarItem.module.scss'
 import seagul from '../../../../assets/img/seagull.svg'
 
-const month = [
+const monthes = [
   'January',
   'February',
   'March',
@@ -22,7 +24,7 @@ const month = [
   'December',
 ]
 const currentDate = new Date(Date.now())
-const createMonth = month[currentDate.getMonth()]
+const createMonth = monthes[currentDate.getMonth()]
 const createDate = currentDate.getDate()
 
 interface CalendarItem {
@@ -33,53 +35,51 @@ interface CalendarItem {
   content: string | string[];
 }
 
-const CalendarItem: React.FC<CalendarItem> = function CalendarItem({
-  date,
-  month,
-  year,
-  day,
-  content,
-}: CalendarItem) {
-  const selected = useSelector((state: any) => state.selected.selectedItem)
-  const dispatch = useDispatch()
+const CalendarItem: React.FC<CalendarItem> = function CalendarItem(props) {
+  const { date, month, year, day, content } = props
   
-  console.log(content)
+  const selectedDay = useSelector((state: any) => state.selectedDay.selectedDay)
+  const selectedMonth = useSelector((state: any) => state.selectedMonth.selectedMonth)
+  const selectedYear = useSelector((state: any) => state.selectedYear.selectedYear)
+
+  const dispatch = useDispatch()
+
+  const handleSelectDay = () => { 
+    if (month !== selectedMonth) {
+      dispatch(selectMonth(monthes[monthes.indexOf(month)]))
+      console.log(monthes[monthes.indexOf(month)], 'month in CalendarItem.tsx')
+      
+    }
+    if (year !== selectedYear) {
+      dispatch(selectYear(year))
+    }
+
+    dispatch(
+      selectDay({
+        date: date,
+        month: month, 
+        year: year,
+        day: day,
+        content: content
+      })
+    )
+  }
   
   return (
     <>
       {createDate === date && createMonth === month ? (
         <div
-          onClick={
-            () => dispatch(
-              select({
-                date: date,
-                month: month, 
-                year: year,
-                day: day,
-                content: content
-              })
-            )
-          }
-          className={selected?.date === createDate ? styles.CalendarItem_selected : styles.CalendarItem_currentDay}
+          onClick={handleSelectDay}
+          className={selectedDay?.date === createDate ? styles.CalendarItem_selected : styles.CalendarItem_currentDay}
         >
           <img className={styles.CalendarItem__seagull} src={seagul} alt="seagull" /> 
         </div>
       ) : (
         <div
-          onClick={
-            () => dispatch(
-              select({
-                date: date,
-                month: month, 
-                year: year,
-                day: day,
-                content: content
-              })
-            )
-          }
+          onClick={handleSelectDay}
           className={
             createMonth === month
-              ? (selected?.date === date ? styles.CalendarItem_selected : (content === '' ? styles.CalendarItem : styles.CalendarItem_withContent))
+              ? (selectedDay?.date === date ? styles.CalendarItem_selected : (content === '' ? styles.CalendarItem : styles.CalendarItem_withContent))
               : styles.CalendarItem_notCurrentMonth
           }
         >

@@ -9,8 +9,8 @@ import styles from './SidebarBlock.module.scss'
 
 
 const SidebarBlock: React.FC = function SidebarBlock() {  
-  const selected = useSelector((state: any) => state.selected.selectedItem)
-  const texts = selected.content
+  const selectedDay = useSelector((state: any) => state.selectedDay.selectedDay)
+  const texts = selectedDay.content
 
   return (
     <div className={styles.SidebarBlock}>

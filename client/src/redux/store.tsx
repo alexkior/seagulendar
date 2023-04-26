@@ -3,11 +3,16 @@ import {
   useSelector as rawUseSelector,
   TypedUseSelectorHook,
 } from 'react-redux'
-import selectedReducer from './slices/selectedSlice'
+import selectedDayReducer from './slices/selectedDaySlice'
+import selectedMonthReducer from './slices/selectedMonthSlice'
+import selectedYearReducer from './slices/selectedYearSlice'
+
 
 export const store = configureStore({
   reducer: {
-    selected: selectedReducer,
+    selectedDay: selectedDayReducer,
+    selectedMonth: selectedMonthReducer,
+    selectedYear: selectedYearReducer
   },
 })
 
