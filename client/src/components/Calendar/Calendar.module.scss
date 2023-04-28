@@ -3,10 +3,10 @@
   grid-column: 2 / 5;
   grid-row-start: 2;
   display: grid;
-  grid-template-columns: repeat(7, auto);
-  grid-template-rows: repeat(auto-fill, 128px);
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(auto-fill, auto);
   justify-items: stretch;
   align-content: stretch;
-  gap: 32px;
+  gap: 2rem;
 }
 

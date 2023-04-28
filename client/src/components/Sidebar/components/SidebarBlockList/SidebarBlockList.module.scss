@@ -21,13 +21,13 @@
   grid-auto-rows: 64px repeat(auto-fill, 128px);
   justify-items: stretch;
   align-content: stretch;
-  row-gap: 32px;
+  row-gap: 2rem;
 }
 
 .SidebarBlock__title {
   min-height: 64px;
   grid-row: 0 / 2;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 900;
   padding: 0px;
   margin: 0px;

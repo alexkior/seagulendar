@@ -3,11 +3,11 @@
   grid-column: 1 / 7;
   grid-row-start: 2;
   display: grid;
-  grid-template-columns: repeat(7, auto);
-  grid-template-rows: repeat(auto-fill, 64px);
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(auto-fill, auto);
   justify-items: stretch;
   align-content: stretch;
-  gap: 32px;
+  gap: 2rem;
 }
 
 .CalendarHeader__test_element {
@@ -20,6 +20,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
