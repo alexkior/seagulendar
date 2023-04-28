@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
-import { useSelector } from '../../../../redux/store'
 import { useDispatch } from 'react-redux'
 import { selectDay } from '../../../../redux/slices/selectedDaySlice'
 
@@ -47,7 +46,7 @@ const CalendarList: React.FC<CalendarListProps> = function CalendarList(props) {
           content:
             days[
               days.findIndex(
-                (el) => el.date === createDate && el.month === createMonth
+                (el: { date: number; month: string }) => el.date === createDate && el.month === createMonth
               )
             ]?.content,
         })
@@ -64,7 +63,7 @@ const CalendarList: React.FC<CalendarListProps> = function CalendarList(props) {
     >
       {days?.length !== 0 ? (
         <>
-          {days?.map((day, index) => (
+          {days?.map((day: { date: number; month: string; year: number; day: string; content: string | string[] }, index: React.Key | null | undefined) => (
             <CalendarItem
               key={index}
               date={day.date}

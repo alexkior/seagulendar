@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import styles from './CalendarController.module.scss'
