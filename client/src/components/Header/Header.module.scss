@@ -4,7 +4,7 @@
   max-width: 1270px;
 
   display: grid;
-  grid-template-columns: repeat(7, 154px);
+  grid-template-columns: repeat(7, auto);
   grid-template-rows: 64px;
   justify-items: stretch;
   align-content: stretch;

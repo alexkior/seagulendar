@@ -4,8 +4,8 @@
   grid-column: 1 / 7;
   grid-row-start: 3;
   display: grid;
-  grid-template-columns: repeat(7, 154px);
-  grid-template-rows: repeat(auto-fill, 128px);
+  grid-template-columns: repeat(7, auto);
+  grid-template-rows: repeat(auto-fill, auto);
   justify-items: stretch;
   align-content: stretch;
   gap: 32px;

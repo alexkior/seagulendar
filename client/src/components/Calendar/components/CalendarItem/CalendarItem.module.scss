@@ -1,8 +1,8 @@
 .CalendarItem {
   background-color: #FAF3E9;
   border-radius: 12px;
-  min-width: 156px;
-  min-height: 128px;
+  // min-width: 156px;
+  // min-height: 128px;
   width: 100%;
   height: 100%;
   user-select: none;
@@ -33,8 +33,8 @@
 
 .CalendarItem_notCurrentMonth {
   border-radius: 12px;
-  min-width: 156px;
-  min-height: 128px;
+  // min-width: 156px;
+  // min-height: 128px;
   width: 100%;
   height: 100%;
   user-select: none;
@@ -51,8 +51,8 @@
 
 .CalendarItem_currentDay {
   border-radius: 12px;
-  min-width: 156px;
-  min-height: 128px;
+  // min-width: 156px;
+  // min-height: 128px;
   width: 100%;
   height: 100%;
   user-select: none;
@@ -84,8 +84,8 @@
 .CalendarItem_withContent {
   background-color: #FF2E6A;
   border-radius: 12px;
-  min-width: 156px;
-  min-height: 128px;
+  // min-width: 156px;
+  // min-height: 128px;
   width: 100%;
   height: 100%;
   user-select: none;
@@ -114,7 +114,7 @@
 }
 
 .CalendarItem__seagull {
-  height: 88px;
+  height: auto;
   animation: pulse 2s infinite;
   user-select: none;
   -webkit-user-drag: none;
@@ -123,8 +123,8 @@
 .CalendarItem_selected {
   background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
   border-radius: 12px;
-  min-width: 156px;
-  min-height: 128px;
+  // min-width: 156px;
+  // min-height: 128px;
   width: 100%;
   height: 100%;
   user-select: none;

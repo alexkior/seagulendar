@@ -36,7 +36,7 @@ To start using Seagulendar, follow these steps:
 
 ## Contributing 🤝
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues](https://github.com/alex-kior/seagulendar/issues) page or start a new one. If you'd like to contribute code, please fork the repository and create a pull request.
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues](https://github.com/alexkior/seagulendar/issues) page or start a new one. If you'd like to contribute code, please fork the repository and create a pull request.
 
 ## License 📄
 
