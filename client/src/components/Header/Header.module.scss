@@ -20,6 +20,8 @@
 
 @media (max-width: 1000px) {
   .Header {
+    min-height: 32px;
+
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: 

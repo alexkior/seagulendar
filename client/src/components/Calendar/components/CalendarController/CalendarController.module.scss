@@ -64,3 +64,18 @@
 
 }
 
+@media (max-width: 1000px) {
+  .CalendarController__current {
+    font-size: 1rem;
+  }
+
+  .CalendarController__previous {
+    font-size: 0.9rem;
+
+  }
+
+  .CalendarController__next {
+    font-size: 0.9rem;
+
+  }
+}

@@ -14,12 +14,17 @@
   align-content: stretch;
   justify-items: stretch;
   gap: 2rem;
+
+}
+
+.MainLayout * {
+  border: none;
 }
 
 @media (max-width: 1000px) {
   .MainLayout {
     grid-template-columns: 1fr;
-    grid-template-rows: 64px auto auto;
+    grid-template-rows: 32px auto auto;
     grid-template-areas: 
     "header"
     "calendar"

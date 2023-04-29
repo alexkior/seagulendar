@@ -20,7 +20,7 @@
 
   cursor: pointer;
   // border: 3px solid #666fff;
-
+  margin: 0;
 }
 
 .CalendarItem:hover {
@@ -52,6 +52,7 @@
   font-weight: 700;
   cursor: pointer;
   // border: 3px solid #666fff;
+  margin: 0;
 
 }
 
@@ -75,6 +76,7 @@
   transition: transform 0.2s;
   cursor: pointer;
   // border: 3px solid #666fff;
+  margin: 0;
 
 }
 
@@ -110,6 +112,7 @@
   transition: transform 0.2s;
   cursor: pointer;
   // border: 3px solid #666fff;
+  margin: 0;
 
 }
 
@@ -152,11 +155,30 @@
   transition: transform 0.2s;
   cursor: pointer;
   // border: 3px solid #666fff;
+  margin: 0;
 
 }
 
 .CalendarItem_selected:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+  .CalendarItem {
+    font-size: 1rem;
+  }
+  .CalendarItem_notCurrentMonth {
+    font-size: 1rem;
+  }
+  .CalendarItem_currentDay {
+    font-size: 1rem;
+  }
+  .CalendarItem_withContent {
+    font-size: 1rem;
+  }
+  .CalendarItem_selected {
+    font-size: 1rem;
+  }
 }
 
 @keyframes pulse {
