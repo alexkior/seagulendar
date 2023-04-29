@@ -73,7 +73,7 @@ const CalendarItem: React.FC<CalendarItem> = function CalendarItem(props) {
           onClick={handleSelectDay}
           className={selectedDay?.date === createDate ? styles.CalendarItem_selected : styles.CalendarItem_currentDay}
         >
-          <img className={styles.CalendarItem__seagull} src={seagul} alt="seagull" /> 
+          {/* <img className={styles.CalendarItem__seagull} src={seagul} alt="seagull" />  */}
         </div>
       ) : (
         <div

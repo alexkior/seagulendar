@@ -18,17 +18,6 @@
 
 }
 
-@media (max-width: 1000px) {
-  .Header {
-    min-height: 32px;
-
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "user_name"
-    "project_name";
-  }
-}
 
 .Header__userName {
   grid-column: 0 / 5;
@@ -56,6 +45,33 @@
 .Header__seagull {
   height: 64px;
   animation: pulse 2s infinite;
+}
+
+
+@media (max-width: 1000px) {
+  .Header {
+    gap: 0;
+    min-height: 32px;
+    align-content: end;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "user_name"
+    "project_name";
+  }
+
+  .Header__userName {
+    padding-left: 0.7rem;
+    font-size: 1.2rem;
+
+  }
+
+  .Header__projectName {
+    padding-right: 0.7rem;
+    font-size: 1.2rem;
+
+  }
+  
 }
 
 @keyframes pulse {

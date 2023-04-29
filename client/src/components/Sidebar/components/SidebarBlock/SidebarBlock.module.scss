@@ -62,3 +62,13 @@
   white-space: wrap;
 
 }
+
+@media (max-width: 1000px) {
+  .SidebarBlock {
+    gap: 1.5rem;
+  }
+
+  .SidebarBlock__title {
+    font-size: 1rem;
+  }
+}
