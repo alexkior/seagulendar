@@ -1,11 +1,13 @@
 .Calendar {
   grid-area: calendar;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   // grid-column: 2 / 5;
   // grid-row-start: 2;
-  // display: grid;
+  display: grid;
+  grid-template-areas: 
+  "calendar_controller"
+  "calendar_header"
+  "calendar_list";
   // grid-template-columns: repeat(7, 1fr);
   // grid-template-rows: repeat(auto-fill, auto);
   // justify-items: stretch;
