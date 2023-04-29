@@ -1,12 +1,17 @@
 .Calendar {
+  grid-area: calendar;
   width: 100%;
-  grid-column: 2 / 5;
-  grid-row-start: 2;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(auto-fill, auto);
-  justify-items: stretch;
-  align-content: stretch;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  // grid-column: 2 / 5;
+  // grid-row-start: 2;
+  // display: grid;
+  // grid-template-columns: repeat(7, 1fr);
+  // grid-template-rows: repeat(auto-fill, auto);
+  // justify-items: stretch;
+  // align-content: stretch;
+  // gap: 2rem;
+
+  border: 3px solid #fff;
 }
 

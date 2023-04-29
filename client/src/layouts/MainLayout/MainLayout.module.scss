@@ -8,8 +8,22 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 64px auto;
+  grid-template-areas: 
+  "sidebar header header header"
+  "sidebar calendar calendar calendar";
   align-content: stretch;
   justify-items: stretch;
   gap: 2rem;
+}
+
+@media (max-width: 1000px) {
+  .MainLayout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px auto auto;
+    grid-template-areas: 
+    "header"
+    "calendar"
+    "sidebar";
+  }
 }
 

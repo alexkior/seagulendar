@@ -1,7 +1,8 @@
 .Sidebar {
-  grid-column: 0 / 2;
-  grid-row-start: 0;
-  position: sticky;
+  grid-area: sidebar;
+  // grid-column: 0 / 2;
+  // grid-row-start: 0;
+  // position: sticky;
   top: 0; 
   width: 100%;
   min-width: 250px;
@@ -15,6 +16,8 @@
   align-content: stretch;
   row-gap: 2rem;
 
+  border: 3px solid #fff;
+
 }
 
 .Sidebar__title {
@@ -24,6 +27,7 @@
   font-weight: 900;
   user-select: none;
   white-space: nowrap;
+  border: 3px solid #ff4;
   
 }
 
@@ -38,6 +42,7 @@
   display: flex;
   align-items: center;
   user-select: none;
+  border: 3px solid #ff4;
 
 }
 

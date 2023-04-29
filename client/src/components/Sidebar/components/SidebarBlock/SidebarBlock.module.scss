@@ -10,6 +10,9 @@
   justify-items: stretch;
   align-content: stretch;
   row-gap: 2rem;
+  
+  // border: 3px solid #666fff;
+
 }
 
 .SidebarBlock__title {
@@ -24,6 +27,8 @@
   user-select: none;
 
 
+  // border: 3px solid #666fff;
+
 }
 .SidebarBlock__test_element {
   background-color: #FAF3E9;
@@ -36,6 +41,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  // border: 3px solid #666fff;
+
 }
 
 .SidebarBlock__test_element_empty {

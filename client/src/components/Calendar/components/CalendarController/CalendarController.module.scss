@@ -10,6 +10,9 @@
   justify-items: stretch;
   align-content: stretch;
   gap: 2rem;
+
+  border: 3px solid #ff4;
+
 }
 
 
@@ -22,6 +25,9 @@
   opacity: 50%;
   user-select: none;
   cursor: pointer;
+
+  // border: 3px solid #666fff;
+
 }
 
 .CalendarController__current {
@@ -31,6 +37,8 @@
   font-size: 2rem;
   font-weight: 900;
   user-select: none;
+
+  // border: 3px solid #666fff;
 
 }
 
@@ -43,5 +51,8 @@
   opacity: 50%;
   user-select: none;
   cursor: pointer;
+
+  // border: 3px solid #666fff;
+
 }
 
