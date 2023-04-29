@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: seagulendar_server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    depends_on:
+      - seagull-db
+    environment:
+      - DATABASE_URL=postgres://seaguladmin:seaguLl@seagull-db:5433/seagull-db
+      - PORT=3000
+
+  seagull-db:
+    container_name: seagull-db
+    image: postgres:14
+    restart: always
+    environment:
+      - POSTGRES_USER=seaguladmin
+      - POSTGRES_PASSWORD=seaguLl
+      - POSTGRES_DB=seagull-db
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - '5433:5433'
+
+volumes:
+  db-data:
