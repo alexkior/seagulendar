@@ -190,18 +190,27 @@
 @media (max-width: 756px) {
   .CalendarItem {
     font-size: 1rem;
+    height: 100%;
   }
   .CalendarItem_notCurrentMonth {
     font-size: 1rem;
+    height: 100%;
+
   }
   .CalendarItem_currentDay {
     font-size: 1rem;
+    height: 100%;
+
   }
   .CalendarItem_withContent {
     font-size: 1rem;
+    height: 100%;
+
   }
   .CalendarItem_selected {
     font-size: 1rem;
+    height: 100%;
+
   }
 }
 
