@@ -1,7 +1,7 @@
 .CalendarHeader {
   grid-area: calendar_header;
   width: 100%;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
   grid-row-start: 2;
   display: grid;
   grid-template-columns: repeat(7, 1fr);

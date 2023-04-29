@@ -2,7 +2,7 @@
   grid-area: calendar_list;
   width: 100%;
   height: auto;
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
   grid-row-start: 3;
   display: grid;
   grid-template-columns: repeat(7, auto);
@@ -16,3 +16,8 @@
 
 }
 
+@media (max-width: 1000px) {
+  .CalendarList {
+
+  }
+}

@@ -4,6 +4,7 @@
   // grid-column: 2 / 5;
   // grid-row-start: 2;
   display: grid;
+  grid-template-columns: repeat(7, 1fr) 1rem;
   grid-template-areas: 
   "calendar_controller"
   "calendar_header"
@@ -12,8 +13,18 @@
   // grid-template-rows: repeat(auto-fill, auto);
   // justify-items: stretch;
   // align-content: stretch;
-  // gap: 2rem;
+  gap: 2rem;
 
   border: 3px solid #fff;
 }
 
+@media (max-width: 1000px) {
+  .Calendar {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "calendar_controller"
+    "calendar_header"
+    "calendar_list";
+  }
+}
