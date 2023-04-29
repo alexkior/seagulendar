@@ -10,42 +10,73 @@
   min-height: 100vh;
   background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
   display: grid;
-  grid-template-columns: 32px repeat(5, 1fr) 32px;
-  grid-template-rows: 64px 128px 1fr;
+  grid-template-columns: 2rem 1fr 2rem;
+  grid-template-rows: 64px 64px 1fr;
   justify-items: stretch;
-  align-content: stretch;
+  align-content: center;
   row-gap: 2rem;
 
-  border: 3px solid #fff;
+  grid-template-areas: 
+  "sidebar_title"
+  "sidebar_subtitle"
+  "sidebar_list";
+
+  border: 1px solid #fff;
 
 }
 
 .Sidebar__title {
-  grid-column: 2 / 5;
-  grid-row: 1;
+  grid-area: sidebar_title;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
   font-size: 1.5rem;
   font-weight: 900;
   user-select: none;
   white-space: nowrap;
-  border: 3px solid #ff4;
-  
+  border: 1px solid #ff4;
+  grid-column: 2 / 3;
 }
 
 .Sidebar__subtitle {
-  grid-column: 2 / 5;
-  grid-row: 2;
-  font-size: 48px;
-  font-weight: 900;
-  padding: 0px;
-  margin: 0px;
-
+  grid-area: sidebar_subtitle;
   display: flex;
   align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  font-weight: 900;
+  padding: 0px;
   user-select: none;
-  border: 3px solid #ff4;
+  border: 1px solid #ff4;
+  grid-column: 2 / 3;
 
 }
 
 .Sidebar__section {
 
+}
+
+@media (max-width: 1000px) {
+  .Sidebar {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 64px 64px 1fr;
+    grid-template-areas: 
+    "sidebar_title sidebar_subtitle"
+    "sidebar_list sidebar_list";
+    row-gap: 0;
+  }
+
+  .Sidebar__title {
+    grid-column: 1 / 2;
+  }
+
+  .Sidebar__subtitle {
+    font-size: 1.5rem;
+    justify-content: flex-end;
+    grid-column: 0 / 1;
+  }
 }

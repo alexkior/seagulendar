@@ -5,12 +5,12 @@
   grid-row-start: 2;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(auto-fill, auto);
+  height: 32px;
   justify-items: stretch;
   align-content: stretch;
   gap: 2rem;
 
-  border: 3px solid #ff4;
+  border: 1px solid #ff4;
 
 }
 
@@ -28,7 +28,7 @@
   font-size: 1.5rem;
   font-weight: 700;
 
-  // border: 3px solid #666fff;
+  // border: 1px solid #666fff;
 
 }
 
