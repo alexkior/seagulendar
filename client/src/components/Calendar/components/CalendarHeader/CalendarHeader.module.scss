@@ -14,6 +14,13 @@
 
 }
 
+@media (max-width: 1000px) {
+  .CalendarHeader {
+    gap: 1rem;
+
+  }
+}
+
 .CalendarHeader__test_element {
   user-select: none;
   border-radius: 12px;

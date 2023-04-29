@@ -16,6 +16,13 @@
 
 }
 
+@media (max-width: 1000px) {
+  .CalendarController {
+    gap: 1rem;
+
+  }
+}
+
 
 .CalendarController__previous {
   grid-column: 1 / 3;
