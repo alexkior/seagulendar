@@ -4,8 +4,9 @@
   // min-width: 156px;
   // min-height: 128px;
 
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
+  aspect-ratio: 4 / 3;
   user-select: none;
 
   display: flex;
@@ -39,8 +40,10 @@
   // min-width: 156px;
   // min-height: 128px;
 
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
+  aspect-ratio: 4 / 3;
+
   user-select: none;
 
   display: flex;
@@ -61,8 +64,9 @@
   // min-width: 156px;
   // min-height: 128px;
 
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
+  aspect-ratio: 4 / 3;
   user-select: none;
 
   display: flex;
@@ -97,8 +101,9 @@
   // min-width: 156px;
   // min-height: 128px;
 
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
+  aspect-ratio: 4 / 3;
   user-select: none;
 
   display: flex;
@@ -139,8 +144,9 @@
   border-radius: 12px;
   // min-width: 156px;
   
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
+  aspect-ratio: 4 / 3;
   user-select: none;
 
   display: flex;
@@ -164,6 +170,24 @@
 }
 
 @media (max-width: 1000px) {
+  .CalendarItem {
+    font-size: 1.5rem;
+  }
+  .CalendarItem_notCurrentMonth {
+    font-size: 1.5rem;
+  }
+  .CalendarItem_currentDay {
+    font-size: 1.5rem;
+  }
+  .CalendarItem_withContent {
+    font-size: 1.5rem;
+  }
+  .CalendarItem_selected {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 756px) {
   .CalendarItem {
     font-size: 1rem;
   }
