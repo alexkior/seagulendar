@@ -14,6 +14,11 @@ import { Note, Prisma } from '@prisma/client';
 export class NoteController {
   constructor(private noteService: NoteService) {}
 
+  @Get('all')
+  getAllNotes(): Promise<Note[]> {
+    return this.noteService.getAllNotes();
+  }
+
   @Get(':id')
   getNoteById(@Param('id') id: string): Promise<Note | null> {
     return this.noteService.getNoteById(Number(id));
@@ -22,11 +27,6 @@ export class NoteController {
   @Get('user/:userId')
   getNotesByUserId(@Param('userId') userId: string): Promise<Note[]> {
     return this.noteService.getNotesByUserId(Number(userId));
-  }
-
-  @Get()
-  getAllNotes(): Promise<Note[]> {
-    return this.noteService.getAllNotes();
   }
 
   @Post()

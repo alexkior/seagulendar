@@ -1,20 +1,20 @@
 version: '3.8'
 
 services:
-  app:
-    container_name: seagulendar_server
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - 3000:3000
-    depends_on:
-      - seagull-db
-    environment:
-      - DATABASE_URL=postgres://postgres:seaguLl@seagull-db:5433/seagull-db
-      - PORT=3000
-    networks:
-      - seagull-network
+  # app:
+  #   container_name: seagulendar_server
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - 3000:3000
+  #   depends_on:
+  #     - seagull-db
+  #   environment:
+  #     - DATABASE_URL=postgres://postgres:seaguLl@seagull-db:5433/seagull-db
+  #     - PORT=3000
+  #   networks:
+  #     - seagull-network
 
   seagull-db:
     container_name: seagull-db

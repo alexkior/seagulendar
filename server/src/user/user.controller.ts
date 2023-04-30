@@ -14,6 +14,11 @@ import { User, Prisma } from '@prisma/client';
 export class UserController {
   constructor(private userService: UserService) {}
 
+  @Get('all')
+  getAllUsers(): Promise<User[]> {
+    return this.userService.getAllUsers();
+  }
+
   @Get(':id')
   getUserById(@Param('id') id: string): Promise<User | null> {
     return this.userService.getUserById(Number(id));
@@ -22,11 +27,6 @@ export class UserController {
   @Get('tg/:tg')
   getUserByTg(@Param('tg') tg: string): Promise<User | null> {
     return this.userService.getUserByTg(tg);
-  }
-
-  @Get()
-  getAllUsers(): Promise<User[]> {
-    return this.userService.getAllUsers();
   }
 
   @Post()
