@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
-
 import styles from './Header.module.scss'
 
 const Header: React.FC = function Header() {
@@ -23,3 +22,7 @@ const Header: React.FC = function Header() {
 }
 
 export default Header
+function useEffect(arg0: () => void, arg1: never[]) {
+  throw new Error('Function not implemented.')
+}
+
