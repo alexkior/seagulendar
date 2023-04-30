@@ -7,7 +7,7 @@ services:
   #     context: .
   #     dockerfile: Dockerfile
   #   ports:
-  #     - 3000:3000
+  #     - '3000:3000'
   #   depends_on:
   #     - seagull-db
   #   environment:
@@ -30,7 +30,7 @@ services:
       - ./pgsql/data/:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
-      - 5433:5432
+      - '5433:5432'
 
 networks: 
   seagull-network:
