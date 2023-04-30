@@ -1,9 +1,10 @@
-import { Injectable } from '@nestjs/common';
+import { Get, Injectable } from '@nestjs/common';
 import { Hears, Help, On, Start, Update } from 'nestjs-telegraf';
 import { Markup } from 'telegraf';
 import { Context } from 'telegraf';
 import { Note, User } from '@prisma/client';
 import { PrismaService } from './prisma.service';
+import { urlStrToAuthDataMap, AuthDataValidator } from '@telegram-auth/server';
 
 @Update()
 @Injectable()
