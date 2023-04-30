@@ -1,0 +1,19 @@
+.Header__userName {
+  grid-column: 0 / 5;
+  font-size: 1.5rem;
+  font-weight: 900;
+  user-select: none;
+  margin: 0;
+  border: 1px solid #ff4;
+
+}
+
+@media (max-width: 1000px) {
+
+  .Header__userName {
+    padding-left: 0.7rem;
+    font-size: 1.2rem;
+
+  }
+  
+}

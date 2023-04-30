@@ -6,6 +6,7 @@ import { UserModule } from './user/user.module';
 import { NoteModule } from './note/note.module';
 import { TelegramModule } from './telegram/telegram.module';
 import { TelegrafModule } from 'nestjs-telegraf';
+import { TelegramAuthController } from './telegram/telegram.auth.controller';
 
 @Module({
   imports: [
@@ -16,7 +17,7 @@ import { TelegrafModule } from 'nestjs-telegraf';
       token: process.env.BOT_TOKEN,
     }),
   ],
-  controllers: [AppController],
+  controllers: [AppController, TelegramAuthController],
   providers: [AppService, PrismaService],
 })
 export class AppModule {}
