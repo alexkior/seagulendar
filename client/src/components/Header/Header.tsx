@@ -17,7 +17,11 @@ const Header: React.FC = function Header() {
         </motion.h2> */}
         <LoginButton
           botUsername="seagulendar_bot"
-          authCallbackUrl="http://localhost:3000/login"
+          onAuthCallback={(data) => {
+            console.log(data)
+            
+          }}
+          // authCallbackUrl="http://localhost:3000/login"
           buttonSize="large" // "large" | "medium" | "small"
           cornerRadius={5} // 0 - 20
           showAvatar={true} // true | false
