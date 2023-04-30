@@ -9,3 +9,27 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id Int @id @default(autoincrement()) 
+  tg String @unique
+  name String?
+  notes Note[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Note {
+  id Int @id @default(autoincrement()) 
+  date Int
+  month String
+  year Int
+  content Json
+  parentId Int
+  parent Note? @relation("NoteToParent", fields: [parentId], references: [id])
+  children Note[] @relation("NoteToParent")
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
