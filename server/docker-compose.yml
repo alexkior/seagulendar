@@ -11,7 +11,7 @@ services:
     depends_on:
       - seagull-db
     environment:
-      - DATABASE_URL=postgres://user:seaguLl@seagull-db:5433/seagull-db
+      - DATABASE_URL=postgres://postgres:seaguLl@seagull-db:5433/seagull-db
       - PORT=3000
 
   seagull-db:
