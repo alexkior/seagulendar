@@ -13,6 +13,8 @@ services:
     environment:
       - DATABASE_URL=postgres://postgres:seaguLl@seagull-db:5433/seagull-db
       - PORT=3000
+    networks:
+      - seagull-network
 
   seagull-db:
     container_name: seagull-db
@@ -26,6 +28,7 @@ services:
       - seagull-network
     volumes:
       - ./pgsql/data/:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - 5433:5432
 

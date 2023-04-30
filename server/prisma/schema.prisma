@@ -25,7 +25,7 @@ model Note {
   month String
   year Int
   content Json
-  parentId Int
+  parentId Int?
   parent Note? @relation("NoteToParent", fields: [parentId], references: [id])
   children Note[] @relation("NoteToParent")
   userId Int
