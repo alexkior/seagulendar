@@ -5,6 +5,7 @@ import * as cookieParser from 'cookie-parser';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix('api');
   app.enableCors();
   const bot = app.get(getBotToken());
   app.use(bot.webhookCallback('/secret-path'));

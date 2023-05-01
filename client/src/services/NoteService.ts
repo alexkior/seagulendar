@@ -4,7 +4,7 @@ import { INote } from '../models/INote'
 
 export const noteApi = createApi({
   reducerPath: 'noteApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000/api/' }),
   tagTypes: ['Notes'],
   endpoints: (builder) => ({
     notes: builder.query<INote[], void>({
