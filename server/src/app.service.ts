@@ -39,7 +39,7 @@ export class AppService {
     await ctx.reply('🐦 THE BEST CALENDAR EVER 🐦');
     await ctx.reply('Here is an app sgdr.live');
     const userId: number | null = ctx.from.username
-      ? (await this.getUserByTg(ctx.from.username)).id
+      ? (await this.getUserByTg(ctx.from.username))?.id
       : null;
     if (userId !== null) {
       const results = (await this.getNotesByUserId(userId)) as Note[];
