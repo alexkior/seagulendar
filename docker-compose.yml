@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   seagulendar_server:
+    image: seagulendar_server:latest
     container_name: seagulendar_server
     build:
       context: ./server
@@ -31,6 +32,7 @@ services:
       - '5433:5432'
 
   seagulendar_client:
+    image: seagulendar_client:latest
     container_name: seagulendar_client
     build:
       context: ./client
