@@ -1,0 +1,19 @@
+{
+  "name": "seagulendar",
+  "version": "0.0.1",
+  "description": "The best calendar ever",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexkior/seagulendar.git"
+  },
+  "author": "Alex Kior",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexkior/seagulendar/issues"
+  },
+  "homepage": "https://github.com/alexkior/seagulendar#readme"
+}
