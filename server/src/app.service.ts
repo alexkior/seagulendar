@@ -38,20 +38,22 @@ export class AppService {
     await ctx.reply('🐦 WELCOME TO SEAGULENDAR 🐦');
     await ctx.reply('🐦 THE BEST CALENDAR EVER 🐦');
     await ctx.reply('Here is an app sgdr.live');
-    const userId: number | null = ctx.from.username
-      ? (await this.getUserByTg(ctx.from.username))?.id
-      : null;
-    if (userId !== null) {
-      const results = (await this.getNotesByUserId(userId)) as Note[];
-      await ctx.reply(
-        `YOUR NOTES:
-        ${results.map(
-          (result) => `${result.date} ${result.month} ${result.year} \n`,
-        )}`,
-      );
-    } else {
-      await ctx.reply('You are not logged in yet. Please, log in.');
-    }
+    console.log(ctx.from.username, 'ctx.from.username');
+    
+    // const userId: number | null = ctx.from.username
+    //   ? (await this.getUserByTg(ctx.from.username))?.id
+    //   : null;
+    // if (userId !== null) {
+    //   const results = (await this.getNotesByUserId(userId)) as Note[];
+    //   await ctx.reply(
+    //     `YOUR NOTES:
+    //     ${results.map(
+    //       (result) => `${result.date} ${result.month} ${result.year} \n`,
+    //     )}`,
+    //   );
+    // } else {
+    //   await ctx.reply('You are not logged in yet. Please, log in.');
+    // }
   }
 
   @Help()
