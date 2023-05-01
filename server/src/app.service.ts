@@ -5,7 +5,6 @@ import { Context } from 'telegraf';
 import { Note, User } from '@prisma/client';
 import { PrismaService } from './prisma.service';
 import { urlStrToAuthDataMap, AuthDataValidator } from '@telegram-auth/server';
-import { Throttle } from '@nestjs/throttler';
 
 @Update()
 @Injectable()
@@ -34,7 +33,6 @@ export class AppService {
   }
 
   @Start()
-  @Throttle(5, 60)
   async startCommand(ctx: Context) {
     await ctx.reply('🐦');
     await ctx.reply('🐦 WELCOME TO SEAGULENDAR 🐦');
