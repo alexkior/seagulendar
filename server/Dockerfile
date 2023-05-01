@@ -5,10 +5,10 @@ FROM node:19.8.1-alpine
 WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json
-COPY package*.json ./
+COPY package.json package-lock.json ./
 
 # Install dependencies
-RUN npm i
+RUN npm ci
 
 # Copy the rest of the application code
 COPY . .
