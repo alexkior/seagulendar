@@ -7,6 +7,8 @@ import { NoteModule } from './note/note.module';
 import { TelegramModule } from './telegram/telegram.module';
 import { TelegrafModule } from 'nestjs-telegraf';
 import { TelegramAuthController } from './telegram/telegram.auth.controller';
+import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
+import { APP_GUARD } from '@nestjs/core';
 
 @Module({
   imports: [
@@ -16,8 +18,19 @@ import { TelegramAuthController } from './telegram/telegram.auth.controller';
     TelegrafModule.forRoot({
       token: process.env.BOT_TOKEN,
     }),
+    ThrottlerModule.forRoot({
+      ttl: 60, // time to live in seconds
+      limit: 10, // number of requests allowed in the ttl duration
+    }),
   ],
   controllers: [AppController, TelegramAuthController],
-  providers: [AppService, PrismaService],
+  providers: [
+    AppService,
+    PrismaService,
+    {
+      provide: APP_GUARD,
+      useClass: ThrottlerGuard,
+    },
+  ],
 })
 export class AppModule {}
