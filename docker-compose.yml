@@ -6,8 +6,6 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    ports:
-      - '3000:3000'
     depends_on:
       - seagull-db
     environment:
@@ -37,8 +35,6 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
-    ports:
-      - '8080:80'
     networks:
       - seagull-network
   
