@@ -3,6 +3,7 @@ version: '3.8'
 services:
   seagulendar_server:
     image: seagulendar_server:latest
+    restart: unless-stopped
     container_name: seagulendar_server
     build:
       context: ./server
@@ -33,6 +34,7 @@ services:
 
   seagulendar_client:
     image: seagulendar_client:latest
+    restart: unless-stopped
     container_name: seagulendar_client
     build:
       context: ./client
