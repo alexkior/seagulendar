@@ -25,11 +25,20 @@ jobs:
     - name: Build and push Docker images
       uses: docker/build-push-action@v2
       with:
-        context: .
+        # Build the server image from the "server" directory
+        context: ./server
+        dockerfile: Dockerfile
         push: true
-        tags: |
-          alexkior/seagulendar_server:latest
-          alexkior/seagulendar_client:latest
+        tags: alexkior/seagulendar_server:latest
+
+    # Build the client image from the "client" directory
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v2
+      with:
+        context: ./client
+        dockerfile: Dockerfile
+        push: true
+        tags: alexkior/seagulendar_client:latest
 
     - name: Deploy to VPS
       uses: appleboy/ssh-action@master
