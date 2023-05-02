@@ -50,3 +50,5 @@ networks:
   seagull-network:
     name: seagull-network
     driver: bridge
+
+
