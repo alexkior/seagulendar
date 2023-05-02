@@ -1,0 +1,28 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Deploy to Production
+      run: |
+        ssh -o StrictHostKeyChecking=no -i ~/.ssh/github_actions_key root@104.248.250.152 "bash -s" <<- 'EOSSH'
+          git clone https://github.com/alexkior/seagulendar.git /root/seagulendar/production || (cd /root/seagulendar/production && git pull)
+          cd /root/seagulendar/production
+          git checkout main
+          docker-compose -f docker-compose.yaml up -d --build
+        EOSSH
