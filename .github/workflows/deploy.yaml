@@ -18,9 +18,12 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+    - name: Setup Docker
+      uses: actions/setup-docker@v1
+
     - name: Deploy to Production
       run: |
-        ssh -o StrictHostKeyChecking=no -i ~/.ssh/github_actions_key root@104.248.250.152 "bash -s" <<- 'EOSSH'
+        ssh -o StrictHostKeyChecking=no root@${{ secrets.VPS_HOST }} "bash -s" <<- 'EOSSH'
           git clone https://github.com/alexkior/seagulendar.git /root/seagulendar/production || (cd /root/seagulendar/production && git pull)
           cd /root/seagulendar/production
           git checkout main
