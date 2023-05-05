@@ -12,7 +12,7 @@ const queryClient = new QueryClient()
 
 import { router } from './router'
 
-import './index.scss'
+import './scss/main.scss'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
