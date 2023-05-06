@@ -3,7 +3,7 @@ import * as React from 'react'
 import { motion } from 'framer-motion'
 import { useSelector } from '../../redux/store'
 
-import styles from './Sidebar.module.scss'
+import styles from './Sidebar.module.css'
 import { SidebarBlockList } from './components/SidebarBlockList'
 
 const Sidebar: React.FC = function Sidebar() {

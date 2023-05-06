@@ -7,7 +7,7 @@ import { selectDay } from '../../../../redux/slices/selectedDaySlice'
 import { selectMonth } from '../../../../redux/slices/selectedMonthSlice'
 import { selectYear } from '../../../../redux/slices/selectedYearSlice'
 
-import styles from './CalendarItem.module.scss'
+import styles from './CalendarItem.module.css'
 import seagul from '../../../../assets/img/seagull.svg'
 
 const monthes = [

@@ -1,12 +1,10 @@
-// @import 'colors';
-
 .SidebarItem {
-  // background-color: $_ivory-white;
+   /* background-color: $_ivory-white; */
   background-color: #FAF3E9;
 
   border-radius: 12px;
-  // min-width: 156px;
-  // min-height: 128px;
+   /* min-width: 156px; */
+   /* min-height: 128px; */
   aspect-ratio: 3 / 1;
   width: 100%;
   height: 100%;
@@ -24,7 +22,7 @@
   animation: hoverout 0.2s;
   transition: transform 0.2s;
 
-  // border: 1px solid #666fff;
+   /* border: 1px solid #666fff; */
 
 }
 
@@ -39,8 +37,8 @@
 .SidebarItem_empty {
   background-color: rgb(250, 243, 233, 0.5);
   border-radius: 12px;
-  // min-width: 156px;
-  // min-height: 128px;
+   /* min-width: 156px; */
+   /* min-height: 128px; */
   aspect-ratio: 3 / 1;
   width: 100%;
   height: 100%;
@@ -58,7 +56,7 @@
   animation: hoverout 0.2s;
   transition: transform 0.3s;
 
-  // border: 1px solid #666fff;
+   /* border: 1px solid #666fff; */
 
 }
 
@@ -67,7 +65,7 @@
 }
 
 .SidebarItem_empty:active {
-  // transform: scale(1);
+   /* transform: scale(1); */
   transform: rotateY(180deg);
 
 }

@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { useSelector } from '../../../../redux/store'
 import { SidebarItem } from '../SidebarItem'
-import styles from './SidebarBlock.module.scss'
+import styles from './SidebarBlock.module.css'
 
 
 const SidebarBlock: React.FC = function SidebarBlock() {  

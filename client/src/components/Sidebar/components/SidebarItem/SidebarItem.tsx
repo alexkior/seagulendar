@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styles from './SidebarItem.module.scss'
+import styles from './SidebarItem.module.css'
 
 interface SidebarItem {
   text: string;

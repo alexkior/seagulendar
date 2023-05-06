@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styles from './CalendarHeader.module.scss'
+import styles from './CalendarHeader.module.css'
 
 const CalendarHeader: React.FC = function CalendarHeader() {
   return (

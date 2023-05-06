@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react'
 import { motion } from 'framer-motion'
-import styles from './CalendarController.module.scss'
+import styles from './CalendarController.module.css'
 import { useSelector } from '../../../../redux/store'
 import { useDispatch } from 'react-redux'
 import { selectMonth } from '../../../../redux/slices/selectedMonthSlice'

@@ -11,7 +11,7 @@
   align-content: stretch;
   row-gap: 2rem;
   
-  // border: 1px solid #666fff;
+   /* border: 1px solid #666fff; */
 
 }
 
@@ -27,7 +27,7 @@
   user-select: none;
 
 
-  // border: 1px solid #666fff;
+   /* border: 1px solid #666fff; */
 
 }
 .SidebarBlock__test_element {
@@ -42,7 +42,7 @@
   align-items: center;
   justify-content: center;
 
-  // border: 1px solid #666fff;
+   /* border: 1px solid #666fff; */
 
 }
 

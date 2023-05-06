@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
-import styles from './LoginButton.module.scss'
+import styles from './LoginButton.module.css'
 import { useEffect, useState } from 'react'
 import TelegramLoginButton, {
   TelegramUser,

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useDispatch } from 'react-redux'
 import { selectDay } from '../../../../redux/slices/selectedDaySlice'
 
-import styles from './CalendarList.module.scss'
+import styles from './CalendarList.module.css'
 
 import { CalendarItem } from '../CalendarItem'
 

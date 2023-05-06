@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
-import styles from './Header.module.scss'
+import styles from './Header.module.css'
 import { LoginButton } from '@telegram-auth/react'
 
 const Header: React.FC = function Header() {

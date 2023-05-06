@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react'
-import styles from './Calendar.module.scss'
+import styles from './Calendar.module.css'
 
 import { CalendarController } from './components/CalendarController'
 import { CalendarHeader } from './components/CalendarHeader'

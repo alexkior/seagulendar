@@ -4,7 +4,7 @@ import { Sidebar } from '../../components/Sidebar'
 import { Header } from '../../components/Header'
 import { Calendar } from '../../components/Calendar'
 
-import styles from './MainLayout.module.scss'
+import styles from './MainLayout.module.css'
 import { IUser } from '../../models/IUser'
 import { useUsersQuery } from '../../services/UserService'
 import { useNotesQuery } from '../../services/NoteService'
