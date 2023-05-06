@@ -1,5 +1,5 @@
 .CalendarItem {
-  background-color: #FAF3E9;
+  background-color: var(--main-color);
   border-radius: 12px;
    /* min-width: 156px; */
    /* min-height: 128px; */
@@ -30,8 +30,8 @@
 
 .CalendarItem:active {
   background-color: #00000000;
-  color: #FAF3E9;
-  background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
+  color: var(--main-color);
+  background: var(--gradient);
   transform: scale(1);
 }
 
@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: center;
 
-  color: #FAF3E9;
+  color: var(--main-color);
   font-size: 2rem;
   font-weight: 700;
   cursor: pointer;
@@ -73,7 +73,7 @@
   align-items: center;
   justify-content: center;
 
-  color: #FAF3E9;
+  color: var(--main-color);
   font-size: 2rem;
   font-weight: 700;
 
@@ -89,14 +89,14 @@
 }
 
 .CalendarItem_currentDay:active {
-  background-color: #faf3e900;
-  color: #FAF3E9;
-  background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
+  background-color: var(--main-color-faded);
+  color: var(--main-color);
+  background: var(--gradient);
   transform: scale(1);
 }
 
 .CalendarItem_withContent {
-  background-color: #FF2E6A;
+  background-color: var(--contrast);
   border-radius: 12px;
    /* min-width: 156px; */
    /* min-height: 128px; */
@@ -110,7 +110,7 @@
   align-items: center;
   justify-content: center;
 
-  color: #FAF3E9;
+  color: var(--main-color);
   font-size: 2rem;
   font-weight: 700;
 
@@ -126,9 +126,9 @@
 }
 
 .CalendarItem_withContent:active {
-  background-color: #faf3e900;
-  color: #FAF3E9;
-  background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
+  background-color: var(--main-color-faded);
+  color: var(--main-color);
+  background: var(--gradient);
   transform: scale(1);
 }
 
@@ -140,7 +140,7 @@
 }
 
 .CalendarItem_selected {
-  background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
+  background: var(--gradient);
   border-radius: 12px;
    /* min-width: 156px; */
   
@@ -153,7 +153,7 @@
   align-items: center;
   justify-content: center;
 
-  color: #FAF3E9;
+  color: var(--main-color);
   font-size: 2rem;
   font-weight: 700;
   transform: scale(1);

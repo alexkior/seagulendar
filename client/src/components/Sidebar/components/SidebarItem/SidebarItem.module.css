@@ -1,6 +1,6 @@
 .SidebarItem {
    /* background-color: $_ivory-white; */
-  background-color: #FAF3E9;
+  background-color: var(--main-color);
 
   border-radius: 12px;
    /* min-width: 156px; */
@@ -79,7 +79,7 @@
   white-space: wrap;
   text-align: center;
   user-select: none;
-  color: #FAF3E9;
+  color: var(--main-color);
 
   display: flex;
   align-items: center;
@@ -94,7 +94,7 @@
 
 .SidebarItem_text {
   width: 80%;
-  color: #1C1C1C;
+  color: var(--black);
   font-size: 14px;
   font-weight: 400;
   white-space: wrap;

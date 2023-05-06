@@ -31,7 +31,7 @@
 
 }
 .SidebarBlock__test_element {
-  background-color: #FAF3E9;
+  background-color: var(--main-color);
   border-radius: 12px;
   min-width: 156px;
   min-height: 128px;
@@ -47,7 +47,7 @@
 }
 
 .SidebarBlock__test_element_empty {
-  background-color: #FAF3E9;
+  background-color: var(--main-color);
   border-radius: 12px;
   min-width: 156px;
   min-height: 128px;
@@ -58,7 +58,7 @@
 
 .SidebarBlock__test_element_text {
   width: 100%;
-  color: #1C1C1C;
+  color: var(--black);
   white-space: wrap;
 
 }

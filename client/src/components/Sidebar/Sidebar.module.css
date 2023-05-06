@@ -8,7 +8,7 @@
   min-width: 250px;
   height: auto;
   min-height: 100vh;
-  background: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
+  background: var(--gradient);
   display: grid;
   grid-template-columns: 2rem 1fr 2rem;
   grid-template-rows: 64px 64px 1fr;
@@ -21,7 +21,7 @@
   "sidebar_subtitle"
   "sidebar_list";
 
-  border: 1px solid #fff;
+  border: 1px solid var(--white);
 
 }
 
