@@ -22,6 +22,186 @@
   --gradient: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
 }
 
+.theme_default { 
+  --main-color: #FAF3E9;
+  --main-color-fadad: #faf3e900;
+  --contrast: #FF2E6A;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #FF9600 0%, #FF0099 100%, #FF2E6A 100%);
+}
+
+.theme_sunrise {
+  --main-color: #FFF0D9;
+  --main-color-faded: #FFF0D900;
+  --contrast: #FFA726;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #FAD961 0%, #F76B1C 100%);
+}
+
+.theme_berry_blast {
+  --main-color: #FFE5F1;
+  --main-color-faded: #FFE5F100;
+  --contrast: #FF2D88;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #FF6FD8 0%, #3813C2 100%);
+}
+
+.theme_cool_breeze {
+  --main-color: #E5F7FF;
+  --main-color-faded: #E5F7FF00;
+  --contrast: #00BCD4;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #84FAB0 0%, #8FD3F4 100%);
+}
+
+.theme_meadow {
+  --main-color: #E7FFDF;
+  --main-color-faded: #E7FFDF00;
+  --contrast: #4CAF50;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #02AAB0 0%, #00CDAC 100%);
+}
+
+.theme_fiesta {
+  --main-color: #FFF3E5;
+  --main-color-faded: #FFF3E500;
+  --contrast: #FF8F00;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #EC008C 0%, #FC6767 100%);
+}
+
+.theme_twilight {
+  --main-color: #F0F0FF;
+  --main-color-faded: #F0F0FF00;
+  --contrast: #483D8B;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #D38312 0%, #A83279 100%);
+}
+
+.theme_cherry_blossom {
+  --main-color: #FFF2F8;
+  --main-color-faded: #FFF2F800;
+  --contrast: #FF69B4;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #FF512F 0%, #DD2476 100%);
+}
+
+.theme_citrus_burst {
+  --main-color: #FFF6E8;
+  --main-color-faded: #FFF6E800;
+  --contrast: #FFA500;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #F09819 0%, #EDDE5D 100%);
+}
+
+.theme_tropical_island {
+  --main-color: #E4FFFC;
+  --main-color-faded: #E4FFFC00;
+  --contrast: #00BFA5;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #1A2980 0%, #26D0CE 100%);
+}
+
+.theme_orchid {
+  --main-color: #F8E6FF;
+  --main-color-faded: #F8E6FF00;
+  --contrast: #D500F9;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #A770EF 0%, #CF8BF3 100%);
+}
+
+.theme_coral_reef {
+  --main-color: #FFECE6;
+  --main-color-faded: #FFECE600;
+  --contrast: #FF7043;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #FF4B1F 0%, #1FBBB4 100%);
+}
+
+.theme_northern_lights {
+  --main-color: #E0FFF7;
+  --main-color-faded: #E0FFF700;
+  --contrast: #00C853;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #A43931 0%, #1D976C 100%);
+}
+
+.theme_lavender_field {
+  --main-color: #F4ECFF;
+  --main-color-faded: #F4ECFF00;
+  --contrast: #7B1FA2;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #E94057 0%, #4A00E0 100%);
+}
+
+.theme_fresh_lemonade {
+  --main-color: #FFFDE7;
+  --main-color-faded: #FFFDE700;
+  --contrast: #FFEB3B;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #FF9A9E 0%, #FAD0C4 100%);
+}
+
+.theme_blue_lagoon {
+  --main-color: #E8F8FF;
+  --main-color-faded: #E8F8FF00;
+  --contrast: #039BE5;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #00C6FF 0%, #0072FF 100%);
+}
+
+.theme_tequila_sunrise {
+  --main-color: #FFF6E5;
+  --main-color-faded: #FFF6E500;
+  --contrast: #FF9800;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #FF5F6D 0%, #FFC371 100%);
+}
+
+.theme_cotton_candy {
+  --main-color: #FFF5FA;
+  --main-color-faded: #FFF5FA00;
+  --contrast: #F06292;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #9D50BB 0%, #6E48AA 100%);
+}
+
+.theme_turquoise_dream {
+  --main-color: #E6FFFA;
+  --main-color-faded: #E6FFFA00;
+  --contrast: #009688;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #00DBDE 0%, #FC00FF 100%);
+}
+
+.theme_vintage_rose {
+  --main-color: #FFF1F2;
+  --main-color-faded: #FFF1F200;
+  --contrast: #D81B60;
+  --black: #1C1C1C;
+  --white: #fff;
+  --gradient: linear-gradient(180deg, #EB3349 0%, #F45C43 100%);
+}
+
 @keyframes AnimateBG { 
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
