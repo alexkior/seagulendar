@@ -1,4 +1,3 @@
-# client/Dockerfile is used to build an image for the client application.
 FROM node:19.8.1-alpine AS build
 
 WORKDIR /app
@@ -16,6 +15,8 @@ FROM nginx:stable-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+RUN ln -sf /etc/nginx/conf.d/default.conf /etc/nginx/nginx.conf
 
 EXPOSE 8080
 
