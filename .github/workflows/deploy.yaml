@@ -25,5 +25,5 @@ jobs:
           cd /home/kior/seagulendar
           git checkout main
           docker-compose -f docker-compose.yml down --rmi all
-          docker-compose -f docker-compose.yml up -d --build --no-cache
+          docker-compose -f docker-compose.yml up -d --build
         EOSSH
