@@ -16,7 +16,7 @@ COPY --from=build /app/dist /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# RUN ln -sf /etc/nginx/conf.d/default.conf /etc/nginx/nginx.conf
+RUN ln -sf /etc/nginx/conf.d/default.conf /etc/nginx/nginx.conf
 
 EXPOSE 8080
 
