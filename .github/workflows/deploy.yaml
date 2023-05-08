@@ -20,9 +20,9 @@ jobs:
 
     - name: Deploy to Production
       run: |
-        ssh -o StrictHostKeyChecking=no root@${{ secrets.VPS_HOST }} "bash -s" <<- 'EOSSH'
-          git clone https://github.com/alexkior/seagulendar.git /root/seagulendar/production || (cd /root/seagulendar/production && git pull)
-          cd /root/seagulendar/production
+        ssh -o StrictHostKeyChecking=no kior@${{ secrets.VPS_HOST }} "bash -s" <<- 'EOSSH'
+          git clone https://github.com/alexkior/seagulendar.git /home/kior/seagulendar/production || (cd /home/kior/seagulendar/production && git pull)
+          cd /home/deployuser/seagulendar/production
           git checkout main
           docker-compose -f docker-compose.yml up -d --build
         EOSSH

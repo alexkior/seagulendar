@@ -29,8 +29,8 @@ services:
     networks:
       - seagull-network
     volumes:
-      - ./server/pgsql/data/:/var/lib/postgresql/data
-      - ./server/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - '5433:5432'
 
@@ -50,5 +50,3 @@ networks:
   seagull-network:
     name: seagull-network
     driver: bridge
-
-
