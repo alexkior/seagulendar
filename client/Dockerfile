@@ -1,4 +1,4 @@
-# client/Dockerfile
+# client/Dockerfile is used to build an image for the client application.
 FROM node:19.8.1-alpine AS build
 
 WORKDIR /app
