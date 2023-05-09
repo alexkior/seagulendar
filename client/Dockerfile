@@ -12,11 +12,9 @@ RUN npm run build
 
 FROM nginx:stable-alpine
 
-COPY --from=build /app/dist /usr/share/nginx/html
-
-COPY nginx.conf /etc/nginx/nginx.conf
-
-# RUN ln -sf /etc/nginx/conf.d/default.conf /etc/nginx/nginx.conf
+COPY --from=build-stage /app/build/ /usr/share/nginx/html
+# Copy the default nginx.conf provided by tiangolo/node-frontend
+COPY --from=build-stage /nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 8080
 
