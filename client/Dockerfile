@@ -10,12 +10,10 @@ COPY . .
 
 RUN npm run build
 
-FROM nginx:stable-alpine
-
-COPY --from=build /app/dist /usr/share/nginx/html
-
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install nginx -y
+COPY --from=build /app/dist /var/www/html/
 EXPOSE 8080
+CMD ["nginx","-g","daemon off;"]
 
-CMD ["nginx", "-g", "daemon off;"]
