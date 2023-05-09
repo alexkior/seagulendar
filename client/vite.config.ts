@@ -10,4 +10,6 @@ export default defineConfig({
     port: 8080,
     https: true
   },
+  base: './',
+  root: '/app',
 })
