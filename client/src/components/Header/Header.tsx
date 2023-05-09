@@ -33,7 +33,7 @@ const Header: React.FC = function Header() {
             console.log(data)
           }}
           // authCallbackUrl="http://localhost:3000/login"
-          buttonSize="large" // "large" | "medium" | "small"
+          buttonSize="small" // "large" | "medium" | "small"
           cornerRadius={5} // 0 - 20
           showAvatar={true} // true | false
           lang="en"
