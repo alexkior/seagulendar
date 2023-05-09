@@ -18,7 +18,7 @@ const Header: React.FC = function Header() {
   return (
     <>
       <header className={styles.Header}>
-        <motion.button
+        {/* <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -26,8 +26,8 @@ const Header: React.FC = function Header() {
           onClick={() => console.log(mockUser)}
         >
           Get User
-        </motion.button>
-        {/* <LoginButton
+        </motion.button> */}
+        <LoginButton
           botUsername="seagulendar_bot"
           onAuthCallback={(data) => {
             console.log(data)
@@ -37,7 +37,7 @@ const Header: React.FC = function Header() {
           cornerRadius={5} // 0 - 20
           showAvatar={true} // true | false
           lang="en"
-        /> */}
+        />
 
         <h1 className={styles.Header__projectName}>Seagulendar</h1>
       </header>
