@@ -133,6 +133,7 @@
 }
 
 .CalendarItem__seagull {
+  max-height: 90%;
   height: auto;
   animation: pulse 2s infinite;
   user-select: none;

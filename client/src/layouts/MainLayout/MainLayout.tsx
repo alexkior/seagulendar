@@ -25,8 +25,8 @@ const MainLayout: React.FC = function MainLayout() {
     data: notesData,
   } = useNotesQuery()
 
-  // const [theme, setTheme] = React.useState('theme_sunset')
-  const theme = useThemeRotator()
+  const [theme, setTheme] = React.useState('theme_default')
+  // const theme = useThemeRotator()
 
   useEffect(() => {
     console.log({

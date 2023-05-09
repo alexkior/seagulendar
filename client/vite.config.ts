@@ -30,5 +30,5 @@ export default defineConfig({
     https: true,
   },
   base: isProduction ? '/' : './',
-  root: isProduction ? undefined : '/app',
+  root: isProduction ? undefined : process.cwd(),
 })
