@@ -1,15 +1,22 @@
 import { defineConfig } from 'vite'
-import mkcert from 'vite-plugin-mkcert'
 import react from '@vitejs/plugin-react'
+import mkcert from 'vite-plugin-mkcert'
+import { config as loadEnv } from 'dotenv'
 
-// https://vitejs.dev/config/
+loadEnv()
+
+const isProduction = process.env.NODE_ENV === 'production'
+
 export default defineConfig({
-  plugins: [react(), mkcert()],
+  plugins: [
+    react(),
+    !isProduction && mkcert(),
+  ].filter(Boolean),
   server: {
     host: '0.0.0.0',
     port: 8080,
-    https: true
+    https: true,
   },
-  base: './',
-  root: '/app',
+  base: isProduction ? '/' : './',
+  root: isProduction ? undefined : '/app',
 })
