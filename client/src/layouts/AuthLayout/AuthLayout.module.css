@@ -1,0 +1,26 @@
+.AuthLayout {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.AuthLayout * {
+  border: none;
+}
+
+@media (max-width: 1000px) {
+  .AuthLayout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "calendar"
+  }
+}
+

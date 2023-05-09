@@ -39,8 +39,8 @@ const Header: React.FC = function Header() {
           lang="en"
         /> */}
 
+        <h1 className={styles.Header__userName}>{mockUser.first_name}</h1>
         <h1 className={styles.Header__projectName}>Seagulendar</h1>
-        <h1 className={styles.Header__projectName}>{mockUser.first_name}</h1>
 
       </header>
     </>

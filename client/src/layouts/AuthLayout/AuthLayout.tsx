@@ -1,17 +1,15 @@
 import * as React from 'react'
 
-import { Sidebar } from '../../components/Sidebar'
-import { Header } from '../../components/Header'
 import { Calendar } from '../../components/Calendar'
 
-import styles from './MainLayout.module.css'
+import styles from './AuthLayout.module.css'
 import { IUser } from '../../models/IUser'
 import { useUsersQuery } from '../../services/UserService'
 import { useNotesQuery } from '../../services/NoteService'
 import { useEffect } from 'react'
 import useThemeRotator from '../../hooks/useThemeRotator'
 
-const MainLayout: React.FC = function MainLayout() {
+const AuthLayout: React.FC = function AuthLayout() {
   const {
     isError: isUsersError,
     isLoading: isUsersLoading,
@@ -25,8 +23,7 @@ const MainLayout: React.FC = function MainLayout() {
     data: notesData,
   } = useNotesQuery()
 
-  const [theme, setTheme] = React.useState('theme_default')
-  // const theme = useThemeRotator()
+  const theme = useThemeRotator()
 
   useEffect(() => {
     console.log({
@@ -48,13 +45,11 @@ const MainLayout: React.FC = function MainLayout() {
 
   return (
     <div className={theme}>
-      <main className={styles.MainLayout}>
-        <Sidebar />
-        <Header />
+      <main className={styles.AuthLayout}>
         <Calendar />
       </main>
     </div>
   )
 }
 
-export default MainLayout
+export default AuthLayout
