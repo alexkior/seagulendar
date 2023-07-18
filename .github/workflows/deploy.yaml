@@ -24,6 +24,8 @@ jobs:
           git clone https://github.com/alexkior/seagulendar.git /home/kior/seagulendar || (cd /home/kior/seagulendar && git pull)
           cd /home/kior/seagulendar
           git checkout main
-          docker-compose -f docker-compose.yml down --rmi all
-          docker-compose -f docker-compose.yml up -d --build
+          docker build -t seagulendar_server:latest ./server
+          docker build -t seagulendar_client:latest ./client
+          docker stack rm seagulendar || true # This removes the existing stack if it exists. If not, it does nothing.
+          docker stack deploy -c docker-compose.yml seagulendar
         EOSSH

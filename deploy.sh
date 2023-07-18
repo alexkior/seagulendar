@@ -5,4 +5,4 @@ docker build -t seagulendar_server:latest ./server
 docker build -t seagulendar_client:latest ./client
 
 # Start containers using Docker Compose
-docker-compose up -d
+docker stack deploy -c docker-compose.yml seagulendar
